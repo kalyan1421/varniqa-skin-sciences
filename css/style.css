@@ -134,6 +134,25 @@ a{
     display:none;
 }
 
+/* Available to screen readers, absent from the visual layout. */
+.visually-hidden{
+
+    position:absolute;
+
+    width:1px;
+    height:1px;
+
+    padding:0;
+    margin:-1px;
+
+    overflow:hidden;
+
+    clip-path:inset(50%);
+
+    white-space:nowrap;
+
+}
+
 /* ==========================================
    CONTAINER
 ========================================== */
@@ -295,13 +314,15 @@ a{
 
 }
 
+/* The headline carries the primary keyword now, so it runs longer than a
+   two-word slogan — the upper bound comes down to keep it to ~3 lines. */
 .hero h1{
 
     font-family:var(--serif);
 
-    font-size:clamp(2.75rem,7vw,5rem);
+    font-size:clamp(1.9rem,4.2vw,3.1rem);
 
-    line-height:1.1;
+    line-height:1.18;
 
     margin-bottom:25px;
 
@@ -316,6 +337,54 @@ a{
     font-size:1.1rem;
 
     max-width:500px;
+
+}
+
+/* Location, hours and credential as visible text — these are the three
+   things local and voice queries ask for, and they are also the selectors
+   named in the page's SpeakableSpecification. */
+.clinic-facts{
+
+    list-style:none;
+
+    margin-top:28px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px 26px;
+
+}
+
+.clinic-facts li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    font-size:.92rem;
+
+    line-height:1.4;
+
+    color:var(--text-light);
+
+}
+
+.clinic-facts svg{
+
+    flex:none;
+
+    width:19px;
+    height:19px;
+
+    fill:none;
+    stroke:var(--accent-text);
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 
 }
 
@@ -415,6 +484,12 @@ section{
 
 }
 
+.faq{
+
+    background:var(--background);
+
+}
+
 .contact{
 
     background:var(--white);
@@ -499,21 +574,56 @@ h3{
    SERVICES
 ========================================== */
 
+/* Marked up as a <ul> so search engines can lift it as a list snippet;
+   the bullets are dropped and the grid does the layout. */
 .services-grid{
 
-    margin-top:60px;
+    list-style:none;
+
+    margin-top:50px;
 
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:30px;
+    gap:40px 30px;
 
 }
 
 .service-card{
 
     padding:10px;
+
+}
+
+.service-card p{
+
+    color:var(--text-light);
+
+    font-size:.97rem;
+
+    line-height:1.75;
+
+}
+
+/* Intro line under a section heading. */
+.section-lead{
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+    max-width:760px;
+
+    margin-top:-8px;
+
+}
+
+.section-lead a{
+
+    color:var(--primary);
+
+    text-underline-offset:4px;
 
 }
 
@@ -644,6 +754,8 @@ h3{
 
 .features{
 
+    list-style:none;
+
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
@@ -708,6 +820,48 @@ h3{
     color:var(--frost-blue);
 
     line-height:1.7;
+
+}
+
+/* ==========================================
+   FAQ
+
+   Answers are plain visible text rather than a <details> accordion:
+   featured snippets and voice answers are extracted from rendered
+   content, and collapsed panels are read as lower-confidence.
+========================================== */
+
+.faq-list{
+
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:34px 50px;
+
+}
+
+.faq-item h3{
+
+    font-size:clamp(1.15rem,1.7vw,1.35rem);
+
+    line-height:1.35;
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+
+}
+
+.faq-item p{
+
+    color:var(--text-light);
+
+    font-size:.97rem;
+
+    line-height:1.75;
 
 }
 
@@ -779,6 +933,59 @@ h3{
 
 }
 
+/* A real <table> so the hours are eligible for a table snippet, and so
+   assistive tech reads day and time as a pair. */
+.hours-table{
+
+    border-collapse:collapse;
+
+    width:100%;
+
+    max-width:360px;
+
+}
+
+.hours-table th,
+.hours-table td{
+
+    padding:5px 0;
+
+    text-align:left;
+
+    font-weight:400;
+
+    font-size:.98rem;
+
+    vertical-align:top;
+
+}
+
+.hours-table th{
+
+    padding-right:24px;
+
+    white-space:nowrap;
+
+    color:var(--text);
+
+}
+
+.hours-table td{
+
+    color:var(--text-light);
+
+}
+
+.areas-served{
+
+    color:var(--text-light);
+
+    font-size:.98rem;
+
+    max-width:420px;
+
+}
+
 .contact-map{
 
     border-radius:var(--radius);
@@ -840,6 +1047,28 @@ footer{
     font-size:.75rem;
 
     color:var(--frost-blue);
+
+}
+
+/* Name, address and phone repeated in the footer — standard local SEO
+   practice, and it gives crawlers a second consistent copy of the NAP. */
+.footer-nap{
+
+    margin-top:22px;
+
+    font-size:.9rem;
+
+    line-height:1.7;
+
+    color:var(--frost-blue);
+
+    opacity:.9;
+
+}
+
+.footer-nap a{
+
+    text-underline-offset:4px;
 
 }
 
@@ -992,9 +1221,18 @@ footer{
     }
 
     .services-grid,
-    .features{
+    .features,
+    .faq-list{
 
         grid-template-columns:1fr;
+
+    }
+
+    .clinic-facts{
+
+        justify-content:center;
+
+        gap:8px 20px;
 
     }
 
