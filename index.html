@@ -705,7 +705,7 @@
 
                         <p class="contact-label">Address</p>
                         <address>
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Varniqa%20Skin%20Sciences%2C%20Hytek%20Arcade%2C%20Kanchi%20Gachibowli%20Road%2C%20Nallagandla%2C%20Hyderabad%20500046"
+                            <a href="https://www.google.com/maps/place/?q=place_id:ChIJV-0YXIWTyzsRct_w2uwMwic"
                                 target="_blank" rel="noopener">
                                 Second Floor, Hytek Arcade, Block A,<br>
                                 Kanchi Gachibowli Rd, Gopanpalle,<br>
@@ -745,12 +745,17 @@
 
                     <div class="contact-map">
 
-                        <!-- TODO (clinic to supply): once the Google Business Profile is claimed,
-                             replace this search-query embed with the Place ID embed from GBP.
-                             A Place ID link ties the map, the listing and this page to one
-                             verified entity, which is what local voice and AI answers read from. -->
+                        <!-- Pinned by the exact Google Business Profile coordinates. The keyless
+                             embed endpoint does NOT understand "q=place_id:..." — it silently
+                             falls back to a regional view — so the coordinate form is used here.
+                             The Place ID still drives the schema (sameAs / hasMap) and the
+                             address link, where it does work.
+
+                             Optional upgrade: Google Maps > your listing > Share > Embed a map
+                             produces a "google.com/maps/embed?pb=..." URL that shows the named
+                             business pin. Drop it in here if you want the label. -->
                         <iframe
-                            src="https://maps.google.com/maps?q=Hytek%20Arcade%2C%20Kanchi%20Gachibowli%20Road%2C%20Nallagandla%2C%20Hyderabad%20500046&amp;output=embed"
+                            src="https://maps.google.com/maps?q=17.4618473,78.308865&amp;z=17&amp;hl=en&amp;output=embed"
                             title="Map showing the location of Varniqa Skin Sciences"
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -802,36 +807,31 @@
     the real values, paste each block into the matching node in the JSON-LD
     that follows and delete it from here.
 
-    1. INTO the "MedicalClinic" node — highest-value GEO fix on the site.
-       This is what lets AI engines confirm Varniqa is a real, corroborated
-       business rather than an unverified web page:
+    DONE 2026-08-05 — Google Business Profile verified and wired in:
+      Place ID   ChIJV-0YXIWTyzsRct_w2uwMwic
+      Coords     17.4618473, 78.308865   (exact, from the GBP listing)
+      Rating     5.0 from 17 reviews
+      Confirmed matching between GBP and this site: business name, phone,
+      opening hours, full address. GBP primary category switched from
+      "Skin care clinic" to "Dermatologist", which now agrees with
+      medicalSpecialty below.
+      Applied to: sameAs, hasMap, geo, aggregateRating, the map embed and
+      the address link.
+      priceRange: not offered by Google for this business category — omitted
+      deliberately, do not add a guessed band.
 
-        "sameAs": [
-          "https://www.google.com/maps/place/?q=place_id:YOUR_GBP_PLACE_ID",
+    STILL OUTSTANDING — only two things left:
+
+    1. INTO the "sameAs" array in the "MedicalClinic" node — the GBP entry is
+       already live; append the clinic's social and directory profiles so the
+       entity graph has more than one corroborating source:
+
           "https://www.instagram.com/YOUR_HANDLE",
           "https://www.facebook.com/YOUR_PAGE",
           "https://www.practo.com/YOUR_PROFILE",
           "https://www.justdial.com/YOUR_LISTING"
-        ],
 
-    2. INTO the "MedicalClinic" node — exact clinic coordinates, read off the
-       Google Business Profile listing (do not guess these; a wrong pin
-       actively hurts local ranking):
-
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": YOUR_LATITUDE,
-          "longitude": YOUR_LONGITUDE
-        },
-        "hasMap": "https://www.google.com/maps/place/?q=place_id:YOUR_GBP_PLACE_ID",
-
-    3. INTO the "MedicalClinic" node — indicative price band. Google
-       recommends this for local business types and it appears in knowledge
-       panels. Use "₹₹" or "₹₹₹" as appropriate:
-
-        "priceRange": "YOUR_BAND",
-
-    4. INTO the "Physician" node — verifiable credentials. For a YMYL medical
+    2. INTO the "Physician" node — verifiable credentials. For a YMYL medical
        site these carry more weight than anything else on the page:
 
         "identifier": {
@@ -848,16 +848,20 @@
           "name": "Indian Association of Dermatologists, Venereologists and Leprologists"
         },
 
-    5. AS A NEW NODE in the @graph — only once you have genuine, verifiable
-       reviews. Never mark up reviews you have not actually received; Google
-       treats fabricated review markup as spam and it risks a manual action:
+    ---------------------------------------------------------------------------
+    NOTE ON aggregateRating — the 5.0 / 17 figures below are real and come from
+    the Google Business Profile. Be aware that Google does NOT render review
+    stars from self-hosted markup for LocalBusiness-type entities (the
+    "self-serving reviews" rule, in force since 2019) — so this will not
+    produce stars in Google results. It is here because it is truthful and
+    because AI answer engines do read it when summarising the clinic. Google
+    already surfaces these reviews via the GBP listing itself.
 
-        {
-          "@type": "AggregateRating",
-          "itemReviewed": { "@id": "https://varniqaclinic.com/#clinic" },
-          "ratingValue": "YOUR_AVERAGE",
-          "reviewCount": "YOUR_COUNT"
-        }
+    If you ever want strictly rich-result-compliant markup, deleting the
+    aggregateRating block is the one-line change. Never inflate the count.
+
+    Whenever the review count changes materially, update reviewCount here so
+    the markup stays truthful.
     ===========================================================================
     -->
 
@@ -884,6 +888,22 @@
           "medicalSpecialty": "Dermatology",
           "currenciesAccepted": "INR",
           "isAcceptingNewPatients": true,
+          "sameAs": [
+            "https://www.google.com/maps/place/?q=place_id:ChIJV-0YXIWTyzsRct_w2uwMwic"
+          ],
+          "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJV-0YXIWTyzsRct_w2uwMwic",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 17.4618473,
+            "longitude": 78.308865
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "17",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Second Floor, Hytek Arcade, Block A, Kanchi Gachibowli Rd, Gopanpalle, Nallagandla",
