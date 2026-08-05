@@ -1,0 +1,320 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="215.9 384.4 721.1 788.8" role="img">
+<defs>
+<filter id="filter-remove-color" x="0%" y="0%" width="100%" height="100%">
+<feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+</filter>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0.30 0 L 3367.88 0 L 3367.88 1559.06 L 0.30 1559.06 Z M 0.30 0 "/>
+</clipPath>
+<mask id="mask-0">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.60"/>
+</g>
+</mask>
+<clipPath id="clip-1">
+<path clip-rule="nonzero" d="M 0.80 0.63 L 23.04 0.63 L 23.04 22.86 L 0.80 22.86 Z M 0.80 0.63 "/>
+</clipPath>
+<clipPath id="clip-2">
+<rect x="0" y="0" width="24" height="23"/>
+</clipPath>
+<g id="source-5" clip-path="url(#clip-2)">
+<g clip-path="url(#clip-1)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 22.02 16.40 C 24.59 10.82 22.15 4.22 16.57 1.65 C 11 -0.92 4.39 1.52 1.83 7.09 C -0.74 12.67 1.70 19.27 7.27 21.84 C 12.85 24.41 19.45 21.97 22.02 16.40 "/>
+</g>
+</g>
+<mask id="mask-1">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.60"/>
+</g>
+</mask>
+<clipPath id="clip-3">
+<path clip-rule="nonzero" d="M 0.23 0.05 L 24.62 0.05 L 24.62 24.43 L 0.23 24.43 Z M 0.23 0.05 "/>
+</clipPath>
+<clipPath id="clip-4">
+<rect x="0" y="0" width="25" height="25"/>
+</clipPath>
+<g id="source-8" clip-path="url(#clip-4)">
+<g clip-path="url(#clip-3)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 23.50 17.34 C 26.31 11.23 23.64 3.99 17.53 1.17 C 11.41 -1.65 4.17 1.03 1.36 7.14 C -1.46 13.25 1.21 20.50 7.32 23.31 C 13.44 26.13 20.68 23.46 23.50 17.34 "/>
+</g>
+</g>
+<mask id="mask-2">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.60"/>
+</g>
+</mask>
+<clipPath id="clip-5">
+<path clip-rule="nonzero" d="M 0.17 0.76 L 26.70 0.76 L 26.70 27.29 L 0.17 27.29 Z M 0.17 0.76 "/>
+</clipPath>
+<clipPath id="clip-6">
+<rect x="0" y="0" width="27" height="28"/>
+</clipPath>
+<g id="source-11" clip-path="url(#clip-6)">
+<g clip-path="url(#clip-5)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 25.48 19.57 C 28.54 12.92 25.64 5.04 18.98 1.98 C 12.33 -1.09 4.45 1.82 1.39 8.47 C -1.68 15.12 1.23 23.00 7.88 26.07 C 14.54 29.13 22.41 26.23 25.48 19.57 "/>
+</g>
+</g>
+<mask id="mask-3">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.60"/>
+</g>
+</mask>
+<clipPath id="clip-7">
+<path clip-rule="nonzero" d="M 0.64 0.25 L 29.32 0.25 L 29.32 28.93 L 0.64 28.93 Z M 0.64 0.25 "/>
+</clipPath>
+<clipPath id="clip-8">
+<rect x="0" y="0" width="30" height="29"/>
+</clipPath>
+<g id="source-14" clip-path="url(#clip-8)">
+<g clip-path="url(#clip-7)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 28 20.59 C 31.32 13.40 28.17 4.88 20.98 1.57 C 13.79 -1.75 5.27 1.40 1.96 8.59 C -1.35 15.78 1.79 24.30 8.98 27.61 C 16.17 30.92 24.69 27.78 28 20.59 "/>
+</g>
+</g>
+<mask id="mask-4">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.60"/>
+</g>
+</mask>
+<clipPath id="clip-9">
+<path clip-rule="nonzero" d="M 0.89 0.40 L 31.72 0.40 L 31.72 31.23 L 0.89 31.23 Z M 0.89 0.40 "/>
+</clipPath>
+<clipPath id="clip-10">
+<rect x="0" y="0" width="32" height="32"/>
+</clipPath>
+<g id="source-17" clip-path="url(#clip-10)">
+<g clip-path="url(#clip-9)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 30.30 22.26 C 33.86 14.53 30.48 5.38 22.76 1.82 C 15.03 -1.75 5.88 1.63 2.31 9.36 C -1.25 17.09 2.13 26.25 9.86 29.81 C 17.59 33.37 26.74 29.99 30.30 22.26 "/>
+</g>
+</g>
+<mask id="mask-5">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.60"/>
+</g>
+</mask>
+<clipPath id="clip-11">
+<path clip-rule="nonzero" d="M 0.57 0.80 L 33.55 0.80 L 33.55 33.77 L 0.57 33.77 Z M 0.57 0.80 "/>
+</clipPath>
+<clipPath id="clip-12">
+<rect x="0" y="0" width="34" height="34"/>
+</clipPath>
+<g id="source-20" clip-path="url(#clip-12)">
+<g clip-path="url(#clip-11)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 32.04 24.18 C 35.84 15.91 32.23 6.12 23.96 2.31 C 15.70 -1.50 5.90 2.12 2.09 10.38 C -1.71 18.65 1.90 28.45 10.16 32.25 C 18.43 36.07 28.23 32.45 32.04 24.18 "/>
+</g>
+</g>
+<mask id="mask-6">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-13">
+<path clip-rule="nonzero" d="M 0.58 0.63 L 35.70 0.63 L 35.70 35.75 L 0.58 35.75 Z M 0.58 0.63 "/>
+</clipPath>
+<clipPath id="clip-14">
+<rect x="0" y="0" width="36" height="36"/>
+</clipPath>
+<g id="source-23" clip-path="url(#clip-14)">
+<g clip-path="url(#clip-13)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 34.09 25.54 C 38.14 16.73 34.29 6.30 25.49 2.25 C 16.68 -1.82 6.25 2.04 2.20 10.84 C -1.87 19.65 1.98 30.08 10.79 34.14 C 19.60 38.20 30.03 34.34 34.09 25.54 "/>
+</g>
+</g>
+<mask id="mask-7">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-15">
+<path clip-rule="nonzero" d="M 0.46 0.86 L 37.73 0.86 L 37.73 38.13 L 0.46 38.13 Z M 0.46 0.86 "/>
+</clipPath>
+<clipPath id="clip-16">
+<rect x="0" y="0" width="38" height="39"/>
+</clipPath>
+<g id="source-26" clip-path="url(#clip-16)">
+<g clip-path="url(#clip-15)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 36.02 27.29 C 40.32 17.95 36.24 6.88 26.89 2.57 C 17.55 -1.73 6.48 2.36 2.18 11.70 C -2.13 21.05 1.95 32.11 11.30 36.42 C 20.64 40.72 31.71 36.64 36.02 27.29 "/>
+</g>
+</g>
+<mask id="mask-8">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-17">
+<path clip-rule="nonzero" d="M 0.43 0.59 L 39.85 0.59 L 39.85 40.01 L 0.43 40.01 Z M 0.43 0.59 "/>
+</clipPath>
+<clipPath id="clip-18">
+<rect x="0" y="0" width="40" height="41"/>
+</clipPath>
+<g id="source-29" clip-path="url(#clip-18)">
+<g clip-path="url(#clip-17)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 38.04 28.55 C 42.59 18.66 38.27 6.96 28.39 2.40 C 18.51 -2.15 6.80 2.17 2.25 12.05 C -2.31 21.93 2.01 33.64 11.90 38.20 C 21.78 42.75 33.48 38.43 38.04 28.55 "/>
+</g>
+</g>
+<mask id="mask-9">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-19">
+<path clip-rule="nonzero" d="M 0.02 0.14 L 41.58 0.14 L 41.58 41.71 L 0.02 41.71 Z M 0.02 0.14 "/>
+</clipPath>
+<clipPath id="clip-20">
+<rect x="0" y="0" width="42" height="42"/>
+</clipPath>
+<g id="source-32" clip-path="url(#clip-20)">
+<g clip-path="url(#clip-19)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 39.67 29.62 C 44.47 19.20 39.92 6.86 29.50 2.06 C 19.07 -2.75 6.73 1.81 1.93 12.23 C -2.88 22.66 1.68 35.00 12.11 39.80 C 22.53 44.61 34.87 40.05 39.67 29.62 "/>
+</g>
+</g>
+<mask id="mask-10">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-21">
+<path clip-rule="nonzero" d="M 0.20 0.71 L 43.91 0.71 L 43.91 44.42 L 0.20 44.42 Z M 0.20 0.71 "/>
+</clipPath>
+<clipPath id="clip-22">
+<rect x="0" y="0" width="44" height="45"/>
+</clipPath>
+<g id="source-35" clip-path="url(#clip-22)">
+<g clip-path="url(#clip-21)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 41.90 31.71 C 46.95 20.75 42.16 7.77 31.20 2.72 C 20.23 -2.33 7.26 2.46 2.20 13.42 C -2.85 24.38 1.95 37.36 12.91 42.41 C 23.87 47.46 36.85 42.67 41.90 31.71 "/>
+</g>
+</g>
+<mask id="mask-11">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-23">
+<path clip-rule="nonzero" d="M 0.45 0.32 L 46.32 0.32 L 46.32 46.18 L 0.45 46.18 Z M 0.45 0.32 "/>
+</clipPath>
+<clipPath id="clip-24">
+<rect x="0" y="0" width="47" height="47"/>
+</clipPath>
+<g id="source-38" clip-path="url(#clip-24)">
+<g clip-path="url(#clip-23)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 44.21 32.84 C 49.50 21.34 44.48 7.73 32.98 2.43 C 21.48 -2.88 7.86 2.15 2.56 13.65 C -2.74 25.15 2.29 38.77 13.79 44.07 C 25.29 49.37 38.91 44.34 44.21 32.84 "/>
+</g>
+</g>
+<mask id="mask-12">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-25">
+<path clip-rule="nonzero" d="M 0.85 0.67 L 48.86 0.67 L 48.86 48.68 L 0.85 48.68 Z M 0.85 0.67 "/>
+</clipPath>
+<clipPath id="clip-26">
+<rect x="0" y="0" width="49" height="49"/>
+</clipPath>
+<g id="source-41" clip-path="url(#clip-26)">
+<g clip-path="url(#clip-25)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 46.65 34.72 C 52.20 22.68 46.93 8.43 34.90 2.88 C 22.86 -2.67 8.60 2.59 3.05 14.63 C -2.49 26.67 2.77 40.93 14.81 46.47 C 26.85 52.02 41.10 46.76 46.65 34.72 "/>
+</g>
+</g>
+<mask id="mask-13">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-27">
+<path clip-rule="nonzero" d="M 0.33 0.64 L 50.49 0.64 L 50.49 50.80 L 0.33 50.80 Z M 0.33 0.64 "/>
+</clipPath>
+<clipPath id="clip-28">
+<rect x="0" y="0" width="51" height="51"/>
+</clipPath>
+<g id="source-44" clip-path="url(#clip-28)">
+<g clip-path="url(#clip-27)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 48.18 36.21 C 53.98 23.64 48.48 8.74 35.90 2.95 C 23.33 -2.85 8.43 2.65 2.64 15.23 C -3.16 27.80 2.34 42.70 14.92 48.49 C 27.49 54.29 42.39 48.79 48.18 36.21 "/>
+</g>
+</g>
+<mask id="mask-14">
+<g filter="url(#filter-remove-color)">
+<rect x="-336.86" y="-155.95" width="4042.31" height="1871.44" fill="rgb(0%, 0%, 0%)" fill-opacity="0.80"/>
+</g>
+</mask>
+<clipPath id="clip-29">
+<path clip-rule="nonzero" d="M 0.15 0.54 L 52.46 0.54 L 52.46 52.84 L 0.15 52.84 Z M 0.15 0.54 "/>
+</clipPath>
+<clipPath id="clip-30">
+<rect x="0" y="0" width="53" height="53"/>
+</clipPath>
+<g id="source-47" clip-path="url(#clip-30)">
+<g clip-path="url(#clip-29)">
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 50.05 37.63 C 56.10 24.52 50.37 8.98 37.25 2.94 C 24.13 -3.10 8.60 2.63 2.56 15.75 C -3.48 28.86 2.25 44.39 15.36 50.44 C 28.48 56.48 44.01 50.75 50.05 37.63 "/>
+</g>
+</g>
+</defs>
+<g mask="url(#mask-0)">
+<use xlink:href="#source-5" transform="matrix(1, 0, 0, 1, 514, 905)"/>
+</g>
+<g mask="url(#mask-1)">
+<use xlink:href="#source-8" transform="matrix(1, 0, 0, 1, 621, 871)"/>
+</g>
+<g mask="url(#mask-2)">
+<use xlink:href="#source-11" transform="matrix(1, 0, 0, 1, 644, 757)"/>
+</g>
+<g mask="url(#mask-3)">
+<use xlink:href="#source-14" transform="matrix(1, 0, 0, 1, 563, 676)"/>
+</g>
+<g mask="url(#mask-4)">
+<use xlink:href="#source-17" transform="matrix(1, 0, 0, 1, 448, 692)"/>
+</g>
+<g mask="url(#mask-5)">
+<use xlink:href="#source-20" transform="matrix(1, 0, 0, 1, 390, 791)"/>
+</g>
+<g mask="url(#mask-6)">
+<use xlink:href="#source-23" transform="matrix(1, 0, 0, 1, 426, 898)"/>
+</g>
+<g mask="url(#mask-7)">
+<use xlink:href="#source-26" transform="matrix(1, 0, 0, 1, 532, 944)"/>
+</g>
+<g mask="url(#mask-8)">
+<use xlink:href="#source-29" transform="matrix(1, 0, 0, 1, 638, 903)"/>
+</g>
+<g mask="url(#mask-9)">
+<use xlink:href="#source-32" transform="matrix(1, 0, 0, 1, 689, 797)"/>
+</g>
+<g mask="url(#mask-10)">
+<use xlink:href="#source-35" transform="matrix(1, 0, 0, 1, 658, 684)"/>
+</g>
+<g mask="url(#mask-11)">
+<use xlink:href="#source-38" transform="matrix(1, 0, 0, 1, 562, 616)"/>
+</g>
+<g mask="url(#mask-12)">
+<use xlink:href="#source-41" transform="matrix(1, 0, 0, 1, 443, 621)"/>
+</g>
+<g mask="url(#mask-13)">
+<use xlink:href="#source-44" transform="matrix(1, 0, 0, 1, 354, 693)"/>
+</g>
+<g mask="url(#mask-14)">
+<use xlink:href="#source-47" transform="matrix(1, 0, 0, 1, 324, 808)"/>
+</g>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 414.57 954.32 C 420.86 940.67 414.89 924.5 401.24 918.21 C 387.59 911.91 371.42 917.88 365.13 931.54 C 358.84 945.19 364.80 961.36 378.46 967.65 C 392.11 973.94 408.28 967.98 414.57 954.32 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 508.87 1024.39 C 515.41 1010.20 509.21 993.39 495.01 986.85 C 480.82 980.31 464.01 986.52 457.47 1000.71 C 450.93 1014.90 457.14 1031.71 471.33 1038.25 C 485.52 1044.79 502.33 1038.59 508.87 1024.39 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 629.18 1032.73 C 635.96 1018.00 629.53 1000.55 614.80 993.76 C 600.07 986.98 582.62 993.41 575.83 1008.14 C 569.04 1022.88 575.48 1040.32 590.21 1047.11 C 604.95 1053.90 622.39 1047.46 629.18 1032.73 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 732.50 980.69 C 739.54 965.42 732.86 947.34 717.59 940.30 C 702.32 933.27 684.24 939.94 677.21 955.21 C 670.17 970.48 676.84 988.56 692.11 995.60 C 707.38 1002.64 725.46 995.96 732.50 980.69 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 796.26 881.85 C 803.55 866.04 796.64 847.32 780.83 840.04 C 765.02 832.75 746.30 839.66 739.02 855.47 C 731.73 871.28 738.64 890.00 754.45 897.28 C 770.26 904.57 788.98 897.66 796.26 881.85 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 801.79 762.73 C 809.32 746.38 802.18 727.02 785.83 719.49 C 769.48 711.96 750.12 719.10 742.59 735.45 C 735.06 751.79 742.20 771.15 758.55 778.69 C 774.90 786.22 794.25 779.07 801.79 762.73 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 751.94 659.76 C 759.72 642.88 752.34 622.88 735.46 615.10 C 718.57 607.32 698.57 614.70 690.79 631.59 C 683.02 648.47 690.39 668.47 707.28 676.25 C 724.16 684.03 744.16 676.65 751.94 659.76 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 658.21 591.64 C 666.24 574.21 658.62 553.58 641.20 545.55 C 623.77 537.52 603.14 545.14 595.11 562.56 C 587.08 579.99 594.70 600.62 612.12 608.65 C 629.54 616.68 650.18 609.06 658.21 591.64 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 539.49 575.54 C 547.77 557.57 539.92 536.30 521.95 528.03 C 503.99 519.75 482.72 527.60 474.44 545.56 C 466.16 563.52 474.02 584.80 491.98 593.07 C 509.94 601.35 531.21 593.5 539.49 575.54 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 430.52 612.61 C 439.04 594.11 430.95 572.20 412.45 563.67 C 393.95 555.15 372.04 563.23 363.52 581.73 C 354.99 600.24 363.08 622.14 381.58 630.67 C 400.08 639.20 421.99 631.11 430.52 612.61 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 348.11 693.35 C 356.88 674.30 348.55 651.76 329.52 642.98 C 310.48 634.21 287.93 642.54 279.16 661.57 C 270.38 680.61 278.71 703.16 297.75 711.93 C 316.79 720.71 339.33 712.39 348.11 693.35 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 307.81 807.29 C 316.83 787.71 308.27 764.52 288.70 755.5 C 269.12 746.48 245.93 755.04 236.91 774.61 C 227.89 794.19 236.45 817.38 256.02 826.40 C 275.60 835.42 298.79 826.86 307.81 807.29 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 318.69 925.50 C 327.96 905.39 319.17 881.56 299.05 872.29 C 278.93 863.02 255.11 871.82 245.84 891.93 C 236.57 912.05 245.36 935.87 265.48 945.14 C 285.60 954.41 309.42 945.62 318.69 925.50 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 374.69 1027.41 C 384.21 1006.75 375.18 982.29 354.52 972.77 C 333.87 963.26 309.41 972.29 299.89 992.94 C 290.37 1013.60 299.40 1038.05 320.05 1047.57 C 340.71 1057.09 365.17 1048.06 374.69 1027.41 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 467.63 1099.89 C 477.40 1078.70 468.14 1053.60 446.94 1043.83 C 425.75 1034.07 400.65 1043.33 390.88 1064.52 C 381.12 1085.72 390.38 1110.82 411.57 1120.58 C 432.77 1130.35 457.87 1121.08 467.63 1099.89 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 586.66 1130.04 C 596.68 1108.31 587.18 1082.57 565.44 1072.56 C 543.71 1062.55 517.97 1072.04 507.96 1093.78 C 497.95 1115.51 507.45 1141.25 529.18 1151.26 C 550.91 1161.27 576.64 1151.78 586.66 1130.04 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 703.91 1113.37 C 714.17 1091.09 704.43 1064.72 682.16 1054.46 C 659.89 1044.20 633.52 1053.93 623.26 1076.20 C 612.99 1098.47 622.73 1124.85 645 1135.11 C 667.27 1145.37 693.64 1135.64 703.91 1113.37 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 804.90 1056.07 C 815.41 1033.26 805.44 1006.25 782.63 995.74 C 759.82 985.23 732.81 995.20 722.30 1018.01 C 711.79 1040.82 721.76 1067.83 744.57 1078.34 C 767.38 1088.85 794.39 1078.88 804.90 1056.07 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 878.59 965.04 C 889.34 941.69 879.14 914.04 855.79 903.28 C 832.45 892.52 804.79 902.73 794.04 926.08 C 783.28 949.43 793.48 977.07 816.83 987.84 C 840.18 998.59 867.83 988.39 878.59 965.04 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 913.97 848.59 C 924.98 824.71 914.54 796.42 890.65 785.41 C 866.77 774.40 838.48 784.84 827.47 808.73 C 816.46 832.62 826.91 860.91 850.79 871.91 C 874.68 882.92 902.96 872.48 913.97 848.59 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 905.84 730.94 C 917.10 706.52 906.42 677.59 882.00 666.34 C 857.57 655.08 828.65 665.75 817.39 690.18 C 806.14 714.61 816.81 743.53 841.24 754.79 C 865.66 766.04 894.59 755.37 905.84 730.94 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 859.02 625.96 C 870.53 601 859.62 571.44 834.65 559.93 C 809.69 548.43 780.12 559.34 768.62 584.30 C 757.12 609.27 768.03 638.83 793.00 650.34 C 817.96 661.84 847.52 650.93 859.02 625.96 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 779.32 542.97 C 791.07 517.47 779.93 487.27 754.42 475.52 C 728.92 463.77 698.72 474.91 686.96 500.41 C 675.21 525.92 686.36 556.12 711.86 567.87 C 737.37 579.62 767.57 568.48 779.32 542.97 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 672.53 491.29 C 684.53 465.25 673.14 434.41 647.11 422.41 C 621.06 410.41 590.23 421.79 578.23 447.83 C 566.23 473.87 577.61 504.71 603.65 516.71 C 629.69 528.71 660.53 517.33 672.53 491.29 "/>
+<path fill-rule="nonzero" fill="#364A62" fill-opacity="1" d="M 552.62 478.99 C 564.87 452.41 553.25 420.94 526.67 408.69 C 500.09 396.44 468.62 408.05 456.37 434.64 C 444.12 461.21 455.74 492.69 482.32 504.94 C 508.90 517.19 540.38 505.57 552.62 478.99 "/>
+</svg>

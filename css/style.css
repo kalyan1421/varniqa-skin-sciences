@@ -1,8 +1,8 @@
 /* ==========================================
    VARNIQA SKIN SCIENCES
+   Brand identity: March 2026
+   Type is loaded from index.html <head>.
 ========================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Red+Hat+Display:wght@300;400;500;600;700&display=swap');
 
 /* ==========================================
    VARIABLES
@@ -10,15 +10,34 @@
 
 :root{
 
-    --primary:#364A62;
-    --secondary:#ACB6BF;
-    --accent:#C1B6A3;
-    --background:#F8F7F2;
-    --white:#ffffff;
-    --text:#364A62;
-    --text-light:#6F7C88;
+    /* --- brand palette (Brand Presentation, p.6) --- */
+    --midnight-steel:#364A62;
+    --calm-grey:#ACB6BF;
+    --frost-blue:#D8E2E4;
+    --natural-linen:#C1B6A3;
+    --mineral-grey:#E2E1DC;
+    --porcelain:#F8F7F2;
 
-    --shadow:0 12px 40px rgba(0,0,0,.08);
+    /* --- derived tints, for text that must clear WCAG AA --- */
+    --deep-linen:#7A6D55;   /* Natural Linen darkened: 4.7:1 on Porcelain */
+    --slate-grey:#5C6873;   /* Calm Grey darkened:    5.3:1 on Porcelain */
+    --midnight-deep:#2D3F54;/* Midnight Steel darkened, for hover states */
+
+    /* --- semantic aliases --- */
+    --primary:var(--midnight-steel);
+    --secondary:var(--calm-grey);
+    --accent:var(--natural-linen);
+    --accent-text:var(--deep-linen);
+    --background:var(--porcelain);
+    --white:#ffffff;
+    --text:var(--midnight-steel);
+    --text-light:var(--slate-grey);
+
+    --shadow:0 12px 40px rgba(54,74,98,.10);
+    --radius:25px;
+
+    --serif:'EB Garamond',Garamond,'Times New Roman',serif;
+    --sans:'Red Hat Display',system-ui,-apple-system,sans-serif;
 
 }
 
@@ -38,18 +57,81 @@ html{
 
 body{
 
-    font-family:'Red Hat Display',sans-serif;
+    font-family:var(--sans);
     background:var(--background);
     color:var(--text);
     line-height:1.8;
+    overflow-x:hidden;
 
 }
 
+/* width/height attributes are set on every <img> to reserve layout
+   space; height:auto keeps them from being stretched to that height. */
 img{
 
-    width:100%;
+    max-width:100%;
+    height:auto;
     display:block;
 
+}
+
+a{
+    color:inherit;
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,*::before,*::after{
+        animation-duration:.01ms !important;
+        transition-duration:.01ms !important;
+    }
+
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.skip-link{
+
+    position:absolute;
+    left:-9999px;
+    top:0;
+    z-index:2000;
+
+    background:var(--primary);
+    color:#fff;
+
+    padding:14px 24px;
+    border-radius:0 0 12px 0;
+
+    text-decoration:none;
+
+}
+
+.skip-link:focus{
+    left:0;
+}
+
+:focus-visible{
+
+    outline:3px solid var(--primary);
+    outline-offset:3px;
+    border-radius:4px;
+
+}
+
+.why-us :focus-visible{
+    outline-color:var(--frost-blue);
+}
+
+/* The icon sprite is a definitions-only SVG. */
+.sprite{
+    display:none;
 }
 
 /* ==========================================
@@ -81,7 +163,7 @@ img{
 
     backdrop-filter:blur(15px);
 
-    border-bottom:1px solid rgba(0,0,0,.05);
+    border-bottom:1px solid rgba(54,74,98,.08);
 
 }
 
@@ -91,13 +173,14 @@ img{
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 0;
+    padding:16px 0;
 
 }
 
 .nav-logo{
 
-    width:220px;
+    width:250px;
+    height:auto;
 
 }
 
@@ -114,34 +197,65 @@ img{
     text-decoration:none;
     color:var(--primary);
     font-weight:500;
-    transition:.3s;
+
+    padding:4px 0;
+    border-bottom:2px solid transparent;
+
+    transition:border-color .3s,color .3s;
 
 }
 
 .nav-links a:hover{
 
-    color:var(--accent);
+    color:var(--accent-text);
+    border-bottom-color:var(--accent);
 
 }
 
-.nav-button{
+/* --- hamburger, mobile only --- */
 
-    text-decoration:none;
+.nav-toggle{
+
+    display:none;
+
+    width:46px;
+    height:46px;
+
+    padding:11px;
+
+    background:none;
+    border:0;
+    cursor:pointer;
+
+}
+
+.nav-toggle-bar{
+
+    display:block;
+    width:100%;
+    height:2px;
+
     background:var(--primary);
-    color:white;
+    border-radius:2px;
 
-    padding:12px 24px;
-
-    border-radius:40px;
-
-    transition:.3s;
+    transition:transform .3s,opacity .2s;
 
 }
 
-.nav-button:hover{
+.nav-toggle-bar+.nav-toggle-bar{
+    margin-top:5px;
+}
 
-    background:#2d3f54;
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1){
+    transform:translateY(7px) rotate(45deg);
+}
 
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2){
+    opacity:0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3){
+    transform:translateY(-7px) rotate(-45deg);
 }
 
 /* ==========================================
@@ -168,11 +282,14 @@ img{
 
 .hero-subtitle{
 
-    color:var(--accent);
+    color:var(--accent-text);
 
     text-transform:uppercase;
 
     letter-spacing:3px;
+
+    font-size:.85rem;
+    font-weight:600;
 
     margin-bottom:20px;
 
@@ -180,9 +297,9 @@ img{
 
 .hero h1{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:var(--serif);
 
-    font-size:5rem;
+    font-size:clamp(2.75rem,7vw,5rem);
 
     line-height:1.1;
 
@@ -214,7 +331,7 @@ img{
 
 .hero-image img{
 
-    border-radius:25px;
+    border-radius:var(--radius);
 
     box-shadow:var(--shadow);
 
@@ -226,13 +343,17 @@ img{
 
 .button{
 
+    display:inline-block;
+
     text-decoration:none;
 
     padding:15px 35px;
 
     border-radius:40px;
 
-    transition:.3s;
+    font-weight:500;
+
+    transition:background .3s,color .3s;
 
 }
 
@@ -240,13 +361,13 @@ img{
 
     background:var(--primary);
 
-    color:white;
+    color:#fff;
 
 }
 
 .primary:hover{
 
-    background:#2d3f54;
+    background:var(--midnight-deep);
 
 }
 
@@ -262,7 +383,7 @@ img{
 
     background:var(--primary);
 
-    color:white;
+    color:#fff;
 
 }
 
@@ -278,7 +399,7 @@ section{
 
 .about{
 
-    background:white;
+    background:var(--white);
 
 }
 
@@ -290,19 +411,13 @@ section{
 
 .services{
 
-    background:white;
-
-}
-
-.why-us{
-
-    background:var(--background);
+    background:var(--white);
 
 }
 
 .contact{
 
-    background:white;
+    background:var(--white);
 
 }
 
@@ -322,32 +437,37 @@ section{
 
 }
 
-.reverse{
-
-    direction:rtl;
-
+/* Column swap without the direction:rtl bidi hack. */
+.reverse .image-column{
+    order:2;
 }
 
-.reverse>*{
-
-    direction:ltr;
-
+.reverse .text-column{
+    order:1;
 }
 
 .section-image,
 .doctor-image{
 
-    border-radius:25px;
+    border-radius:var(--radius);
 
     box-shadow:var(--shadow);
 
 }
 
+.text-column p+p{
+
+    margin-top:18px;
+
+}
+
 h2{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:var(--serif);
 
-    font-size:3rem;
+    font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
 
     margin-bottom:25px;
 
@@ -355,9 +475,11 @@ h2{
 
 h3{
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:var(--serif);
 
-    font-size:2rem;
+    font-size:clamp(1.5rem,2.5vw,2rem);
+
+    line-height:1.3;
 
     margin-bottom:10px;
 
@@ -365,7 +487,7 @@ h3{
 
 .designation{
 
-    color:var(--accent);
+    color:var(--accent-text);
 
     margin-bottom:20px;
 
@@ -389,13 +511,19 @@ h3{
 
 }
 
+.service-card{
+
+    padding:10px;
+
+}
+
 .service-icon{
 
     width:85px;
 
     height:85px;
 
-    background:#EEF2F5;
+    background:var(--frost-blue);
 
     border-radius:50%;
 
@@ -405,13 +533,25 @@ h3{
 
     align-items:center;
 
-    font-size:2rem;
-
     color:var(--primary);
 
     margin:0 auto 25px;
 
-    transition:.4s;
+    transition:background .4s,color .4s,transform .4s;
+
+}
+
+.service-icon svg,
+.feature-icon svg{
+
+    width:38px;
+    height:38px;
+
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 
 }
 
@@ -419,12 +559,11 @@ h3{
 
     background:var(--primary);
 
-    color:white;
+    color:#fff;
 
     transform:translateY(-5px);
 
 }
-
 
 /* ==========================================
    WHY CHOOSE US
@@ -432,17 +571,56 @@ h3{
 
 .why-us{
 
-    background:#364A62;
+    position:relative;
 
-    color:white;
+    background:var(--primary);
+
+    color:#fff;
 
     padding:100px 0;
+
+    overflow:hidden;
+
+}
+
+/* Echo of the brandmark's graduated dots — as used on the
+   letterhead and business card (Brand Presentation, pp.11-13). */
+.why-us::before{
+
+    content:"";
+
+    position:absolute;
+    top:-60px;
+    right:-80px;
+
+    width:420px;
+    height:420px;
+
+    background:
+        radial-gradient(circle 9px at 20% 12%,rgba(255,255,255,.10) 98%,transparent 100%),
+        radial-gradient(circle 6px at 46% 6%,rgba(255,255,255,.08) 98%,transparent 100%),
+        radial-gradient(circle 11px at 72% 20%,rgba(255,255,255,.09) 98%,transparent 100%),
+        radial-gradient(circle 7px at 88% 44%,rgba(255,255,255,.07) 98%,transparent 100%),
+        radial-gradient(circle 10px at 80% 72%,rgba(255,255,255,.09) 98%,transparent 100%),
+        radial-gradient(circle 6px at 56% 88%,rgba(255,255,255,.07) 98%,transparent 100%),
+        radial-gradient(circle 9px at 28% 80%,rgba(255,255,255,.08) 98%,transparent 100%),
+        radial-gradient(circle 7px at 10% 52%,rgba(255,255,255,.07) 98%,transparent 100%),
+        radial-gradient(circle 4px at 40% 34%,rgba(255,255,255,.06) 98%,transparent 100%),
+        radial-gradient(circle 4px at 62% 56%,rgba(255,255,255,.06) 98%,transparent 100%);
+
+    pointer-events:none;
+
+}
+
+.why-us .container{
+
+    position:relative;
 
 }
 
 .why-us h2{
 
-    color:white;
+    color:#fff;
 
     text-align:center;
 
@@ -454,7 +632,7 @@ h3{
 
     text-align:center;
 
-    color:#d8dee5;
+    color:var(--frost-blue);
 
     max-width:700px;
 
@@ -484,7 +662,7 @@ h3{
 
     text-align:center;
 
-    transition:.3s;
+    transition:background .3s,transform .3s;
 
     backdrop-filter:blur(8px);
 
@@ -498,19 +676,28 @@ h3{
 
 }
 
-.feature i{
+.feature-icon{
 
-    font-size:2.8rem;
+    display:flex;
 
-    color:#C1B6A3;
+    justify-content:center;
+
+    color:var(--accent);
 
     margin-bottom:20px;
 
 }
 
+.feature-icon svg{
+
+    width:46px;
+    height:46px;
+
+}
+
 .feature h3{
 
-    color:white;
+    color:#fff;
 
     margin-bottom:15px;
 
@@ -518,7 +705,7 @@ h3{
 
 .feature p{
 
-    color:#d8dee5;
+    color:var(--frost-blue);
 
     line-height:1.7;
 
@@ -538,14 +725,85 @@ h3{
 
     margin-top:50px;
 
+    align-items:start;
+
 }
 
 .contact-details{
 
-    font-size:1.1rem;
+    font-size:1.05rem;
 
 }
 
+.contact-label{
+
+    font-weight:600;
+
+    color:var(--accent-text);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:.75rem;
+
+    margin-top:26px;
+
+}
+
+.contact-label:first-child{
+
+    margin-top:0;
+
+}
+
+.contact-details address{
+
+    font-style:normal;
+
+}
+
+.contact-details a{
+
+    color:var(--primary);
+
+    text-decoration-color:var(--calm-grey);
+
+    text-underline-offset:4px;
+
+}
+
+.contact-details a:hover{
+
+    text-decoration-color:var(--primary);
+
+}
+
+.contact-map{
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    min-height:420px;
+
+}
+
+.contact-map iframe{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    min-height:420px;
+
+    border:0;
+
+}
 
 /* ==========================================
    FOOTER
@@ -555,7 +813,7 @@ footer{
 
     background:var(--primary);
 
-    color:white;
+    color:#fff;
 
     text-align:center;
 
@@ -565,86 +823,217 @@ footer{
 
 .footer-logo{
 
-    width:180px;
+    width:200px;
+
+    height:auto;
 
     margin:0 auto 25px;
 
 }
 
+.footer-tagline{
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.75rem;
+
+    color:var(--frost-blue);
+
+}
+
+/* Calm Grey on Midnight Steel is 4.4:1 — just under AA at this
+   size, so the legal line uses Frost Blue and separates from the
+   tagline by weight and tracking instead of colour. */
+.footer-legal{
+
+    margin-top:14px;
+
+    font-size:.9rem;
+
+    color:var(--frost-blue);
+
+    opacity:.85;
+
+}
+
 /* ==========================================
-   MOBILE
+   RESPONSIVE
 ========================================== */
+
+@media(max-width:1024px){
+
+    .section-container,
+    .hero-content{
+
+        gap:45px;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
 
 @media(max-width:900px){
 
-.nav-container{
+    section{
 
-    flex-direction:column;
+        padding:64px 0;
 
-    gap:20px;
+    }
+
+    .nav-container{
+
+        flex-wrap:wrap;
+
+        padding:12px 0;
+
+    }
+
+    .nav-toggle{
+
+        display:block;
+
+        order:2;
+
+    }
+
+    nav{
+
+        order:3;
+        flex-basis:100%;
+
+    }
+
+    .nav-links{
+
+        display:none;
+
+        flex-direction:column;
+
+        gap:0;
+
+        padding:8px 0 14px;
+
+    }
+
+    .nav-links.is-open{
+
+        display:flex;
+
+    }
+
+    .nav-links a{
+
+        display:block;
+
+        padding:12px 2px;
+
+        border-bottom:1px solid rgba(54,74,98,.08);
+
+    }
+
+    .nav-links a:hover{
+
+        border-bottom-color:rgba(54,74,98,.08);
+
+    }
+
+    .nav-logo{
+
+        width:200px;
+
+    }
+
+    .hero{
+
+        padding:56px 0;
+
+    }
+
+    .hero-content,
+    .section-container,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* On one column the image should follow the copy. */
+    .reverse .image-column{
+
+        order:2;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero-description{
+
+        margin:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .services-grid,
+    .features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .feature{
+
+        padding:32px 24px;
+
+    }
+
+    .why-us::before{
+
+        width:260px;
+        height:260px;
+
+    }
 
 }
 
-.nav-links{
+@media(max-width:480px){
 
-    flex-wrap:wrap;
+    .container,
+    .section-container,
+    .nav-container,
+    .hero-content{
 
-    justify-content:center;
+        width:92%;
 
-    gap:25px;
+    }
 
-}
+    .button{
 
-.hero-content,
-.section-container,
-.contact-grid{
+        padding:14px 26px;
 
-    grid-template-columns:1fr;
+    }
 
-}
+    .hero-buttons{
 
-.hero{
+        gap:12px;
 
-    text-align:center;
-
-}
-
-.hero-description{
-
-    margin:auto;
-
-}
-
-.hero-buttons{
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-}
-
-.hero h1{
-
-    font-size:3.6rem;
-
-}
-
-.services-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.features{
-
-    grid-template-columns:1fr;
-
-}
-
-.nav-logo{
-
-    width:180px;
-
-}
+    }
 
 }
