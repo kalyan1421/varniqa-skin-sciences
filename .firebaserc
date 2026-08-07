@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "varniqa-skin-sciences"
+  },
+  "targets": {
+    "varniqa-skin-sciences": {
+      "hosting": {
+        "site": ["varniqa-skin-sciences"]
+      }
+    }
+  }
+}
