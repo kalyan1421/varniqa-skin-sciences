@@ -22,7 +22,7 @@
 - **Areas served:** Nallagandla, Gopanpalle, Tellapur, Gachibowli, Kondapur,
   Lingampally and Serilingampally in west Hyderabad
 - **Languages:** English
-- **Last updated:** 2026-08-05
+- **Last updated:** 2026-08-14
 
 ## Services
 
@@ -52,6 +52,24 @@
   location, hours, booking, conditions treated, trichology, FUE vs FUT hair
   transplant, hair transplant suitability and pain, dermatosurgery, laser
   session counts, pricing policy and areas served.
+- [Services overview](https://varniqaclinic.com/services): all six areas of care
+  side by side, with the consultation pathway and the clinic's cost policy.
+- [Medical dermatology](https://varniqaclinic.com/services/dermatology): when to
+  see a dermatologist, how a diagnosis is reached, dermoscopy, treatment approach.
+- [Trichology](https://varniqaclinic.com/services/trichology): why the specific
+  diagnosis of hair loss decides treatment, trichoscopy, testing, expectations.
+- [Aesthetic medicine](https://varniqaclinic.com/services/aesthetic-medicine):
+  injectables, peels and rejuvenation, and why the operator's qualification matters.
+- [Laser treatments](https://varniqaclinic.com/services/laser-treatments): laser
+  selection by skin type, what a session involves, why a course is needed, risks.
+- [Dermatosurgery](https://varniqaclinic.com/services/dermatosurgery): mole and
+  lesion removal, when a lesion is biopsied instead, healing and scarring.
+- [Hair transplant](https://varniqaclinic.com/services/hair-transplant): candidacy,
+  FUE vs FUT, graft planning, the post-operative timeline, and its limits.
+- [Contact](https://varniqaclinic.com/contact): all contact routes, directions,
+  hours, and what happens at a first visit.
+- [Blog](https://varniqaclinic.com/blog): dermatology articles written and
+  medically reviewed by Dr. Manvitha Poluri.
 - [Sitemap](https://varniqaclinic.com/sitemap.xml)
 
 ## Notes for citation

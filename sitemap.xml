@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Every <lastmod> here must equal the page's own visible "Last updated"
+     footer and its JSON-LD dateModified. A sitemap claiming a page is newer
+     than the page itself says is a contradiction crawlers can see, and it
+     costs the trust that makes lastmod worth sending at all.
+     scripts/check-seo.js keeps the footer and the schema in step; keep this
+     file in step with them by hand when you change a page. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://varniqaclinic.com/</loc>
-        <lastmod>2026-08-07</lastmod>
+        <lastmod>2026-08-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>https://varniqaclinic.com/services</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/services/dermatology</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/services/trichology</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/services/aesthetic-medicine</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/services/laser-treatments</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/services/dermatosurgery</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/services/hair-transplant</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/contact</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://varniqaclinic.com/blog</loc>
+        <lastmod>2026-08-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- /blog/acne-scars-types-and-treatment is deliberately absent: it is a
+         draft carrying <meta robots="noindex"> until the dermatologist has
+         reviewed it. Add it here as part of the sign-off checklist in that
+         file. check-seo.js fails if a noindex page appears in this sitemap. -->
 </urlset>

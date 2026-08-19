@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "health_score": 79,
+    "business_type": "Local dermatology, aesthetics and hair-restoration clinic",
+    "top_findings": [
+      "Only one indexable commercial URL",
+      "Medical E-E-A-T proof is incomplete",
+      "Service cards have no next action",
+      "No visible privacy or medical-policy layer",
+      "Review proof is present in schema but not visible"
+    ],
+    "quick_wins": [
+      "Publish verified clinician registration and education",
+      "Add privacy/disclaimer/WhatsApp guidance",
+      "Add service-level CTAs and mobile booking access",
+      "Link visible GBP/review proof",
+      "Validate live schema and HTTP 404 behavior"
+    ]
+  },
+  "categories": [
+    {"name":"Technical SEO","score":88,"what_works":["Crawlable semantic HTML","Canonical, sitemap, robots and 404 document","Security and cache headers"],"findings":[{"title":"Single-URL architecture","severity":"High","description":"The sitemap contains only the homepage and navigation uses fragments.","recommendation":"Create dedicated service and condition pages."}]},
+    {"name":"Content Quality","score":68,"what_works":["Substantial cautious medical copy","Diagnosis-first positioning"],"findings":[{"title":"Incomplete medical authority proof","severity":"High","description":"Registration, education, memberships and reviewer policy are absent.","recommendation":"Publish verified credentials and clinician review metadata."}]},
+    {"name":"On-Page SEO","score":70,"what_works":["Strong local H1 and meta description","Clear headings"],"findings":[{"title":"Individual search intents lack URLs","severity":"High","description":"Six services and many conditions share one homepage.","recommendation":"Map one primary intent to each substantive page."}]},
+    {"name":"Schema / Structured Data","score":86,"what_works":["Linked clinic, physician, website, webpage and FAQ graph"],"findings":[{"title":"Schema proof and service entities need refinement","severity":"Medium","description":"Physician identifiers are absent and services have no stable URLs.","recommendation":"Add verified identifiers and dedicated service entities/URLs."}]},
+    {"name":"Performance","score":84,"what_works":["Responsive WebP images","LCP preload","Small deferred JS"],"findings":[{"title":"Third-party font and GTM risk","severity":"Medium","description":"Google Fonts is render-blocking and GTM executes in head.","recommendation":"Subset/self-host fonts and audit GTM; measure live CWV."}]},
+    {"name":"AI Search Readiness","score":90,"what_works":["AI crawlers allowed","Detailed llms.txt","Direct FAQ answers"],"findings":[{"title":"Authority limits citability","severity":"Medium","description":"Third-party corroboration and deep topic URLs are limited.","recommendation":"Strengthen verifiable entity proof and dedicated intent pages."}]},
+    {"name":"Images","score":95,"what_works":["Descriptive alt text","Dimensions, srcset, WebP and lazy loading"],"findings":[]},
+    {"name":"Services / Conversion","score":61,"what_works":["Broad service overview","Local call and WhatsApp access","Responsible expectations"],"findings":[{"title":"Service cards are dead ends","severity":"Critical","description":"Cards contain no detail or booking actions.","recommendation":"Add linked service journeys and contextual CTAs."}]},
+    {"name":"Design / UX","score":74,"what_works":["Coherent calm brand system","Responsive layouts","Accessibility baseline"],"findings":[{"title":"Long brochure-like page","severity":"High","description":"Mobile render is approximately 13,145 px tall with dense services and FAQs.","recommendation":"Improve hierarchy, progressive disclosure and persistent conversion access."}]}
+  ],
+  "action_plan": {
+    "phases": [
+      {"name":"Phase 1: Critical Fixes","timeframe":"Weeks 1-2","items":["Trust credentials and legal policies","Service and mobile CTAs","Visible review proof","Clinical wording review"]},
+      {"name":"Phase 2: High-Impact Improvements","timeframe":"Weeks 3-6","items":["Service hubs","Condition pages","Internal linking and sitemap","Patient journey content"]},
+      {"name":"Phase 3: Content & Authority","timeframe":"Month 2","items":["Medically reviewed education","Professional citations","Performance refinement"]},
+      {"name":"Phase 4: Monitoring & Iteration","timeframe":"Ongoing","items":["GSC and GBP","Conversions","CWV","Freshness synchronization"]}
+    ]
+  },
+  "artifacts": {"findings_dir":"findings/","screenshots_dir":"screenshots/"}
+}

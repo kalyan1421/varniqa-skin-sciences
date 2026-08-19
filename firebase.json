@@ -10,8 +10,13 @@
       ".vscode/**",
       "**/node_modules/**",
       "CNAME",
-      "README.md",
-      "*.py"
+      "**/*.py",
+      "**/*.md",
+      "**/*.docx",
+      "**/*.log",
+      "**/*.patch",
+      "docs/**",
+      "scripts/**"
     ],
     "cleanUrls": true,
     "trailingSlash": false,

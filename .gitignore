@@ -6,3 +6,22 @@ Thumbs.db
 firebase-debug.log
 *.log
 
+# Editor / tooling working directories
+.vscode/
+.impeccable/
+.claude/settings.local.json
+
+# Screenshot/QA tooling only — the site itself has no build step and no deps
+node_modules/
+package-lock.json
+
+# Scratch and generated output — nothing here is a source of truth
+tmp/
+output/
+
+# Python bytecode only. The scripts in scripts/ are checked in on purpose:
+# check-seo.py is the pre-deploy gate, so it has to travel with the repo.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

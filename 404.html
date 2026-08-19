@@ -18,16 +18,20 @@
     <meta name="robots" content="noindex">
     <meta name="theme-color" content="#364A62">
 
-    <link rel="icon" href="images/brandmark.svg" type="image/svg+xml">
-    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="/images/brandmark.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Red+Hat+Display:wght@400;500&display=swap">
+    <!-- Self-hosted, like every other page. This one was still fetching the
+         two families from fonts.googleapis.com after the rest of the site
+         stopped, which meant the 404 was the only page paying for a
+         render-blocking third-party stylesheet. -->
+    <link rel="preload" as="font" type="font/woff2"
+        href="/fonts/red-hat-display-var-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2"
+        href="/fonts/eb-garamond-700-latin.woff2" crossorigin>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <style>
         .notfound{
@@ -72,7 +76,39 @@
 
             max-width:460px;
 
-            margin-bottom:35px;
+        }
+
+        .notfound .hero-buttons{
+
+            margin-top:32px;
+
+            flex-wrap:wrap;
+
+            justify-content:center;
+
+        }
+
+        /* .footer-nav is coloured for the dark footer; on this light page the
+           links need the body palette instead. */
+        .notfound-nav{
+
+            margin-top:44px;
+
+        }
+
+        .notfound-nav a{
+
+            color:var(--text-light);
+
+            text-decoration-color:var(--calm-grey);
+
+        }
+
+        .notfound-nav a:hover{
+
+            color:var(--primary);
+
+            text-decoration-color:var(--primary);
 
         }
     </style>
@@ -87,7 +123,7 @@
 
     <main class="notfound">
 
-        <img src="images/logo-primary.svg" alt="Varniqa Skin Sciences" width="2612" height="789">
+        <img src="/images/logo-primary.svg" alt="Varniqa Skin Sciences" width="2612" height="789">
 
         <h1>Page not found</h1>
 
@@ -96,7 +132,20 @@
             Let's get you back to safe ground.
         </p>
 
-        <a href="/" class="button primary">Return home</a>
+        <div class="hero-buttons">
+
+            <a href="/" class="button primary">Return home</a>
+
+            <a href="/services" class="button secondary">Browse services</a>
+
+        </div>
+
+        <nav class="footer-nav notfound-nav" aria-label="Suggested pages">
+            <a href="/services">Services</a>
+            <a href="/blog">Blog</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/contact">Contact</a>
+        </nav>
 
     </main>
 

@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "varniqa-site",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8899", "--bind", "127.0.0.1"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.js", "8899"],
       "port": 8899
     }
   ]
