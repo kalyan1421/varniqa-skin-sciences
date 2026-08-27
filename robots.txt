@@ -1,13 +1,8 @@
-# Nothing on this site is private, so nothing is disallowed. Every rule below
-# is a declaration of intent rather than a restriction — "Allow: /" under the
-# wildcard already permits all of it.
+# Public pages and assets may be crawled by search and answer engines.
 User-agent: *
 Allow: /
 
-# AI answer engines and training crawlers are welcome — being cited by
-# Perplexity, ChatGPT Search, Gemini, Claude and Google AI Overviews is a goal,
-# not a risk, for a local clinic. Listed explicitly so the intent is
-# unambiguous to anyone auditing this file later.
+# Explicit AI crawler policy for AEO/GEO discovery.
 User-agent: GPTBot
 Allow: /
 
@@ -53,11 +48,7 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Do NOT add the draft article at /blog/acne-scars-types-and-treatment here.
-# It is kept out of search by a noindex meta tag, and a crawler has to fetch
-# the page to see that tag. Disallowing the URL would hide the instruction
-# while leaving the URL itself indexable from any external link — the exact
-# outcome the noindex was added to prevent. Withhold pages with noindex, and
-# use this file only for crawl control.
+# Draft articles remain crawlable so crawlers can see their noindex directive.
+# Do not disallow a noindex URL here.
 
 Sitemap: https://varniqaclinic.com/sitemap.xml

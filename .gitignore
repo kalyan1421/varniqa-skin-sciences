@@ -18,6 +18,12 @@ package-lock.json
 # Scratch and generated output — nothing here is a source of truth
 tmp/
 output/
+.tmp-seo/
+
+# Photo originals. The repo root is the web root, so anything committed here
+# is published: only the optimised webp derivatives in images/ belong in git.
+gallery images/
+*.zip
 
 # Python bytecode only. The scripts in scripts/ are checked in on purpose:
 # check-seo.py is the pre-deploy gate, so it has to travel with the repo.

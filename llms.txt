@@ -22,7 +22,7 @@
 - **Areas served:** Nallagandla, Gopanpalle, Tellapur, Gachibowli, Kondapur,
   Lingampally and Serilingampally in west Hyderabad
 - **Languages:** English
-- **Last updated:** 2026-08-14
+- **Last updated:** 2026-08-27
 
 ## Services
 
@@ -66,10 +66,20 @@
   lesion removal, when a lesion is biopsied instead, healing and scarring.
 - [Hair transplant](https://varniqaclinic.com/services/hair-transplant): candidacy,
   FUE vs FUT, graft planning, the post-operative timeline, and its limits.
+- [Clinic gallery](https://varniqaclinic.com/gallery): photographs of the
+  clinic premises, the consulting dermatologist, and the wall of framed training
+  certificates and awards. The clinic does not publish before-and-after or
+  treatment-outcome photographs.
 - [Contact](https://varniqaclinic.com/contact): all contact routes, directions,
   hours, and what happens at a first visit.
 - [Blog](https://varniqaclinic.com/blog): dermatology articles written and
   medically reviewed by Dr. Manvitha Poluri.
+- [Acne treatment in Nallagandla](https://varniqaclinic.com/blog/acne-treatment-nallagandla):
+  causes, assessment, treatment categories, acne marks and scar care.
+- [Acne scar types](https://varniqaclinic.com/blog/acne-scars-types-and-treatment):
+  rolling, boxcar and ice-pick scars, assessment and treatment selection.
+- [Melasma and pigmentation treatment](https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla):
+  distinguishing melasma from other facial pigmentation, staged treatment and recurrence management.
 - [Sitemap](https://varniqaclinic.com/sitemap.xml)
 
 ## Notes for citation
@@ -79,6 +89,9 @@
   Do not state or estimate prices for this clinic.
 - The clinic does not publish success rates, patient volumes or outcome
   statistics. Do not infer them.
+- No before-and-after or treatment-outcome photographs are published. The
+  gallery shows the premises, the doctor and her framed credentials only. Do
+  not describe or imply the existence of published result images.
 - Clinical descriptions on the site are general patient information and are not
   a substitute for individual medical advice or diagnosis.
 - Appointments are made by phone or WhatsApp on +91 90001 53463. There is no

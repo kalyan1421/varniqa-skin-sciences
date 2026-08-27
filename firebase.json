@@ -15,8 +15,10 @@
       "**/*.docx",
       "**/*.log",
       "**/*.patch",
+      "**/*.zip",
       "docs/**",
-      "scripts/**"
+      "scripts/**",
+      "gallery images/**"
     ],
     "cleanUrls": true,
     "trailingSlash": false,

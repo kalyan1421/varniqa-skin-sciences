@@ -2376,6 +2376,33 @@ html{
 
 }
 
+/* --- inline links outside .prose ---
+   The concern lists and the FAQ answers are where a condition page is worth
+   linking from: they name the condition in the reader's own words, at the
+   moment they are scanning for it. Neither sits inside .prose, and the base
+   rule is a{color:inherit}, so without this a link there would render as
+   plain text and nobody would find it. Same treatment as .prose a, so an
+   inline link reads identically wherever it appears in the body. */
+.concern-list a,
+.service-concerns a,
+.faq-item p a{
+
+    color:var(--primary);
+
+    text-underline-offset:4px;
+
+    text-decoration-color:var(--calm-grey);
+
+}
+
+.concern-list a:hover,
+.service-concerns a:hover,
+.faq-item p a:hover{
+
+    text-decoration-color:var(--primary);
+
+}
+
 .prose strong{
 
     font-weight:600;
@@ -3940,4 +3967,437 @@ html{
     .acne-guide .article-body .author-box{
         flex-direction:column;
     }
+}
+
+/* ==========================================
+   GALLERY
+
+   Photographs laid out close to their own proportions rather than
+   cropped into a uniform tile grid — with this few pictures, a forced
+   square crop of a portrait reads as carelessness, not as a system.
+
+   Two photographs sit level in a row when their widths are in the same
+   proportion as their aspect ratios, and then neither has to be cropped
+   at all. Both rows here are built that way, so every column ratio below
+   is derived from the pictures rather than chosen for looks:
+
+     row 1   2fr / 1fr   4:3 reception  beside  2:3 portrait of the doctor
+     row 2   4fr / 3fr   16:9 procedure room  beside  4:3 treatment room
+
+   Replace a photograph with one of a different shape and the column
+   ratio and the aspect-ratio below have to move together, or cover will
+   start trimming to make the row line up. The arithmetic is one step:
+   width ratio = aspect ratio ratio. 4:3 against 2:3 is 1.333 : 0.667,
+   which is 2 : 1.
+
+========================================== */
+
+.gallery-grid{
+
+    list-style:none;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+}
+
+/* Wide shots get a row to themselves — at half width a 2.5:1 panorama
+   is a letterbox strip too short to read. */
+.gallery-item--full{
+
+    grid-column:1 / -1;
+
+}
+
+/* The media box owns the shape; the image fills it. Declaring the ratio
+   here rather than letting the intrinsic size drive it is what keeps the
+   row aligned to the pixel, and it reserves the space before the image
+   arrives, so nothing shifts on load. */
+.gallery-media{
+
+    display:block;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:var(--radius);
+
+    background:var(--surface-sunken);
+
+    box-shadow:var(--shadow);
+
+}
+
+.gallery-media img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .5s;
+
+}
+
+/* Native shapes: reception is 1448x1086, the portrait 1600x2400. Against
+   the 2fr / 1fr columns above they finish at the same height untrimmed. */
+.gallery-item--lead .gallery-media{
+    aspect-ratio:4 / 3;
+}
+
+.gallery-item--portrait .gallery-media{
+    aspect-ratio:2 / 3;
+}
+
+.gallery-item--full .gallery-media{
+    aspect-ratio:1240 / 496;
+}
+
+/* A second row of two, taking the full width and splitting it in the
+   proportion the two pictures need to come out level. The nested list
+   carries the split; each figure inside is an ordinary gallery item. */
+.gallery-item--pair{
+
+    grid-column:1 / -1;
+
+}
+
+.gallery-pair{
+
+    list-style:none;
+
+    display:grid;
+
+    grid-template-columns:4fr 3fr;
+
+    gap:20px;
+
+}
+
+/* 16:9 against 4:3 is 1.778 : 1.333, which is the 4 : 3 split above. */
+.gallery-item--half-wide .gallery-media{
+    aspect-ratio:16 / 9;
+}
+
+.gallery-item--half .gallery-media{
+    aspect-ratio:4 / 3;
+}
+
+/* A row of three, on the same rule as the pair: widths in proportion to
+   the aspect ratios, so all three finish level and none is cropped.
+   3:4 and two 2:3s are 0.75 : 0.667 : 0.667, which is 9 : 8 : 8. */
+.gallery-item--trio{
+
+    grid-column:1 / -1;
+
+}
+
+.gallery-trio{
+
+    list-style:none;
+
+    display:grid;
+
+    grid-template-columns:9fr 8fr 8fr;
+
+    gap:20px;
+
+}
+
+.gallery-item--third-tall .gallery-media{
+    aspect-ratio:3 / 4;
+}
+
+.gallery-item--third-portrait .gallery-media{
+    aspect-ratio:2 / 3;
+}
+
+/* The affordance: a photograph that opens is not otherwise distinguishable
+   from one that does not, and a cursor change says nothing on a phone. */
+.gallery-zoom{
+
+    position:absolute;
+
+    right:14px;
+    bottom:14px;
+
+    display:grid;
+    place-items:center;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:rgba(54,74,98,.82);
+
+    color:#fff;
+
+    opacity:0;
+
+    transform:translateY(6px);
+
+    transition:opacity .3s,transform .3s;
+
+}
+
+.gallery-zoom svg{
+
+    width:17px;
+    height:17px;
+
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+
+}
+
+/* Touch devices never hover, so the control has to be there from the
+   start; pointer devices get it on approach. */
+@media(hover:hover){
+
+    .gallery-media:hover img,
+    .gallery-media:focus-visible img{
+        transform:scale(1.03);
+    }
+
+    .gallery-media:hover .gallery-zoom,
+    .gallery-media:focus-visible .gallery-zoom{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@media(hover:none){
+
+    .gallery-zoom{
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+.gallery-grid figcaption{
+
+    margin-top:14px;
+
+    color:var(--text-light);
+
+    font-size:.95rem;
+
+    line-height:1.6;
+
+}
+
+/* The subject on its own line above the sentence: the captions are read
+   in a glance down the column, and the names are what is scanned for. */
+.gallery-grid figcaption strong{
+
+    display:block;
+
+    color:var(--text);
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   LIGHTBOX
+
+   A native <dialog>, which brings the top layer, the backdrop, focus
+   containment and Escape-to-close with it. script.js only fills in the
+   image and calls showModal(); everything below is presentation.
+========================================== */
+
+/* inset + margin:auto is what centres a modal dialog, and both have to be
+   written out here. The browser's own dialog styles say exactly that, but
+   the reset at the top of this file sets margin:0 on *, and an author rule
+   beats a UA rule at any specificity — so without this the lightbox pins
+   itself to the top-left corner of the screen. */
+.lightbox{
+
+    inset:0;
+
+    margin:auto;
+
+    /* No fixed width: the panel takes the size the photograph inside it
+       ends up at, so a picture is never matted with bars down the sides.
+       It has to be spelled fit-content rather than auto — the dialog is
+       in the top layer with inset:0, and there width:auto fills the
+       containing block instead of shrinking to its contents. */
+    width:fit-content;
+    height:fit-content;
+
+    max-width:min(94vw,1240px);
+
+    max-height:92vh;
+
+    padding:0;
+
+    border:0;
+    border-radius:var(--radius);
+
+    background:var(--white);
+
+    color:var(--text);
+
+    overflow:hidden;
+
+}
+
+.lightbox::backdrop{
+
+    background:rgba(45,63,84,.86);
+
+}
+
+.lightbox-figure{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* Bounded on both axes and left to find its own size between them, which
+   is what keeps the panel the same shape as the picture. The height bound
+   subtracts the caption, so a tall portrait cannot push it off the bottom
+   of a short viewport.
+
+   align-self is load-bearing: the figure is a column flex container, so
+   the default stretch would blow the picture out to the panel's full
+   width while max-height still clamped its height — a portrait came out
+   squashed into a landscape. Centring opts it out of stretching and lets
+   width:auto mean the width the picture actually is. */
+.lightbox-figure img{
+
+    align-self:center;
+
+    width:auto;
+    height:auto;
+
+    max-width:min(94vw,1240px);
+    max-height:calc(92vh - 76px);
+
+    border-radius:var(--radius) var(--radius) 0 0;
+
+}
+
+.lightbox-figure figcaption{
+
+    padding:16px 24px 18px;
+
+    color:var(--text-light);
+
+    font-size:.95rem;
+
+}
+
+/* Inside the panel at every size. Hanging it off the corner looks lighter
+   but depends on there being room outside the dialog for it, and on a
+   short viewport — where max-height has the panel nearly filling the
+   screen — there is none, so the control clips off the top edge. */
+.lightbox-close{
+
+    position:absolute;
+
+    top:14px;
+    right:14px;
+
+    z-index:1;
+
+    display:grid;
+    place-items:center;
+
+    width:44px;
+    height:44px;
+
+    border:0;
+    border-radius:50%;
+
+    /* It sits over the photograph, so it carries its own ground rather
+       than trusting whatever pixels happen to be behind it. */
+    background:rgba(45,63,84,.88);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:background .3s;
+
+}
+
+.lightbox-close:hover{
+
+    background:var(--midnight-deep);
+
+}
+
+.lightbox-close svg{
+
+    width:18px;
+    height:18px;
+
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+    stroke-linecap:round;
+
+}
+
+@media(max-width:900px){
+
+    /* One column, and each photograph keeps its own proportions: at phone
+       width there is no second column to align to, so the crop that made
+       the desktop row line up is no longer buying anything. */
+    .gallery-grid{
+        grid-template-columns:1fr;
+        gap:26px;
+    }
+
+    .gallery-pair,
+    .gallery-trio{
+        grid-template-columns:1fr;
+        gap:26px;
+    }
+
+    .gallery-item--lead .gallery-media,
+    .gallery-item--portrait .gallery-media,
+    .gallery-item--half .gallery-media,
+    .gallery-item--half-wide .gallery-media,
+    .gallery-item--third-tall .gallery-media,
+    .gallery-item--third-portrait .gallery-media,
+    .gallery-item--full .gallery-media{
+        aspect-ratio:auto;
+    }
+
+    .gallery-media img{
+        height:auto;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .lightbox{
+        max-width:100vw;
+        max-height:100vh;
+        border-radius:0;
+    }
+
+    .lightbox-figure img{
+        max-width:100vw;
+        max-height:calc(100vh - 84px);
+        border-radius:0;
+    }
+
 }

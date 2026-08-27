@@ -107,7 +107,8 @@ function urlToFile(url) {
 function discover() {
   const pages = ['index.html'];
   if (exists('contact.html')) pages.push('contact.html');
-  for (const d of ['services', 'blog']) {
+  if (exists('gallery.html')) pages.push('gallery.html');
+  for (const d of ['services', 'blog', 'conditions']) {
     const full = path.join(ROOT, d);
     if (!fs.existsSync(full) || !fs.statSync(full).isDirectory()) continue;
     for (const name of fs.readdirSync(full).sort()) {
