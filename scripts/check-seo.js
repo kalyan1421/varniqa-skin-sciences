@@ -10,6 +10,8 @@
  *   * the visible review figures drifting from aggregateRating
  *   * speakable selectors pointing at classes that no longer exist
  *   * referenced images or self-hosted fonts that 404
+ *   * asset paths written document-relative instead of root-relative
+ *   * inline sprite icons a page defines but never draws
  *   * internal links and in-page anchors pointing at nothing
  *   * the sitemap and the built pages disagreeing about what exists
  *   * the shared chrome (nav, footer NAP, sticky bar) drifting between pages
@@ -204,6 +206,21 @@ function checkAssets(src, p, css) {
     if (!exists(font)) fail(`${p}: preloaded font missing: ${font}`);
     else if (!css.includes(font)) fail(`${p}: font preloaded but never used in CSS: ${font}`);
   }
+  // Asset paths must be root-relative. A document-relative path happens to
+  // resolve on the home page and nowhere else, so the moment a head like it
+  // is copied into blog/ or services/ the stylesheet 404s and — worse,
+  // because preload failures are silent — the font and LCP-image hints just
+  // stop working with nothing on screen to say so.
+  const rel = new Set(all(src, /(?:src|href|imagesrcset)="((?:css|js|images|fonts)\/[^"]+)"/g));
+  for (const set of all(src, /(?:image)?srcset="([^"]+)"/g)) {
+    for (const part of set.split(',')) {
+      const u = part.trim().split(/\s+/)[0];
+      if (/^(?:css|js|images|fonts)\//.test(u)) rel.add(u);
+    }
+  }
+  for (const u of [...rel].sort()) {
+    fail(`${p}: asset path "${u}" is document-relative — write it as "/${u}"`);
+  }
 }
 
 function checkIconRefs(src, p) {
@@ -211,6 +228,13 @@ function checkIconRefs(src, p) {
   const uses = new Set(all(src, /<use href="#([^"]+)"/g));
   for (const u of [...uses].sort()) {
     if (!syms.has(u)) fail(`${p}: <use> references undefined icon #${u}`);
+  }
+  // The sprite is inline, so every symbol is re-sent on every page view and
+  // the HTML is served must-revalidate. A page started by copying another one
+  // inherits that page's whole sprite, which is how ~4KB of icons nobody
+  // draws ends up in the payload; carry only what the page actually uses.
+  for (const s of [...syms].sort()) {
+    if (!uses.has(s)) fail(`${p}: sprite defines unused icon #${s} — remove it`);
   }
 }
 
@@ -306,6 +330,7 @@ function main() {
     'footer NAP': /<p class="footer-nap">([\s\S]*?)<\/p>/,
     'nav links': /<ul class="nav-links" id="nav-links">([\s\S]*?)<\/ul>/,
     'footer nav': /<nav class="footer-nav" aria-label="Footer">([\s\S]*?)<\/nav>/,
+    'footer social links': /<nav class="footer-social" aria-label="Follow Varniqa Skin Sciences">([\s\S]*?)<\/nav>/,
     'sticky bar': /<div class="mobile-cta"[^>]*>([\s\S]*?)\n {4}<\/div>/,
     'script tag': /(<script src=[^>]*js\/script\.js[^>]*>)/,
   };

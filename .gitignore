@@ -26,7 +26,7 @@ gallery images/
 *.zip
 
 # Python bytecode only. The scripts in scripts/ are checked in on purpose:
-# check-seo.py is the pre-deploy gate, so it has to travel with the repo.
+# check-seo.js is the pre-deploy gate, so it has to travel with the repo.
 __pycache__/
 *.pyc
 *.pyo

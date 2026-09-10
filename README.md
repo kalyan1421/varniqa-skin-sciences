@@ -11,25 +11,56 @@ root, so anything committed at the top level is publicly served unless
 /                       web root — served as-is
 ├── index.html          home
 ├── contact.html        contact / booking
-├── 404.html
+├── gallery.html        clinic photographs + lightbox
+├── 404.html            standalone: its CSS is inline on purpose
 ├── blog/               article index + posts
 ├── services/           service index + one page per service
+├── conditions/         condition index + one page per condition
 ├── css/style.css       the whole stylesheet
 ├── js/script.js        the whole script
-├── images/             webp/svg assets (with -640 variants for srcset)
+├── images/             webp/svg assets (with -640/-1024 variants for srcset)
 ├── fonts/              self-hosted woff2 (see fonts/README.md)
 ├── robots.txt · sitemap.xml · llms.txt · favicon.ico · CNAME
 │
 ├── docs/               internal — never deployed
 │   ├── audit/          pre-redesign audit of the live site + screenshots
+│   ├── strategy/       SEO strategy, content calendar, roadmap
+│   ├── drafts/         article drafts before they become pages
+│   ├── blog-source-render/
 │   └── proposals/      client-facing deliverables
 ├── scripts/            dev tooling — never deployed
-└── PRODUCT.md          product brief
+├── PRODUCT.md          product brief
+└── DESIGN.md           design system reference
+
+Untracked and never deployed, but present in the working tree:
+
+output/                 generated .docx/.pdf reports
+gallery images/         photo originals — see "Photo originals" below
+tmp/                    scratch
 ```
 
 `docs/`, `scripts/`, and all `.md`/`.py`/`.docx` files are excluded from
 deploys via the `ignore` list in `firebase.json`. Keep that list in sync when
-adding a new non-public directory.
+adding a new non-public directory. `check-seo.js` reads that same list and
+fails if a file that should ship would be withheld, or vice versa.
+
+### Photo originals
+
+`gallery images/` and `gallery images.zip` are ~67MB of camera originals —
+one 12MB JPEG, an HEIC, multi-megabyte PNGs. They are gitignored and named in
+the `firebase.json` ignore list, so today they neither commit nor deploy. But
+they sit *inside* the web root, which means a single mistake in that ignore
+list publishes 12MB photographs to the live site. Only the optimised `webp`
+derivatives in `images/` belong here.
+
+They are safer kept outside the repo entirely, e.g. alongside it:
+
+```
+mv "gallery images" "gallery images.zip" ../varniqa-photo-originals/
+```
+
+Nothing in the site references them — the gallery uses `images/*.webp` — so
+moving them cannot break a page, and `node scripts/check-seo.js` confirms it.
 
 ## Working on it
 
@@ -63,10 +94,15 @@ node scripts/check-seo.js
 
 It exits non-zero on the failures a browser cannot show you: FAQ markup that
 has drifted from the visible copy, titles disagreeing with the JSON-LD graph,
-broken internal links or missing assets, a stale sitemap, and — because the
-header and footer are physically duplicated in every page — shared chrome that
-has diverged between pages. Read its docstring before changing nav or footer
-markup.
+broken internal links or missing assets, a stale sitemap, inline sprite icons
+a page defines but never draws, and — because the header and footer are
+physically duplicated in every page — shared chrome that has diverged between
+pages. Read its docstring before changing nav or footer markup.
+
+When starting a page by copying an existing one, cut the sprite down to the
+icons the new page actually draws. The sprite is inline and the HTML is served
+`must-revalidate`, so an inherited symbol nobody uses is bytes re-sent on
+every single page view. The gate fails on those, so it cannot drift back.
 
 ## Deploying
 
