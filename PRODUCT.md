@@ -73,7 +73,7 @@ Explicitly undecided / outstanding:
 - Google Business Profile verified. Place ID `ChIJV-0YXIWTyzsRct_w2uwMwic`, coordinates 17.4618473, 78.308865. **Rated 5.0 from 17 reviews** — real, and now shown visibly on the homepage as well as in `aggregateRating`.
 - Authentic clinic interior and doctor photography.
 - 13 existing FAQ entries, live and schema-synced.
-- **Absences future work must not fill by invention:** no consented patient testimonials, no before/after imagery, no published credentials beyond MBBS/MD (DVL), no social or directory profiles wired into `sameAs` beyond Google Maps, no case studies, no press.
+- **Absences future work must not fill by invention:** no consented patient testimonials, no before/after imagery, no published credentials beyond MBBS/MD (DVL), no directory profiles wired into `sameAs` beyond Google Maps, no case studies, no press. Verified Instagram, YouTube, LinkedIn, Facebook and Pinterest profiles are present in the footer and clinic schema.
 
 ## Product Principles
 

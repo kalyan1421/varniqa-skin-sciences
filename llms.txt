@@ -22,7 +22,7 @@
 - **Areas served:** Nallagandla, Gopanpalle, Tellapur, Gachibowli, Kondapur,
   Lingampally and Serilingampally in west Hyderabad
 - **Languages:** English
-- **Last updated:** 2026-08-29
+- **Last updated:** 2026-09-08
 
 ## Services
 
@@ -79,6 +79,9 @@
   causes, assessment, treatment categories, acne marks and scar care.
 - [Acne scar types](https://varniqaclinic.com/blog/acne-scars-types-and-treatment):
   rolling, boxcar and ice-pick scars, assessment and treatment selection.
+- [Conditions treated](https://varniqaclinic.com/conditions): index of the skin, hair,
+  scalp and nail conditions the clinic treats, each linked to the page that
+  covers it -- the service page, patient guide or condition page.
 - [Melasma and pigmentation treatment](https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla):
   distinguishing melasma from other facial pigmentation, staged treatment and recurrence management.
 - [Sitemap](https://varniqaclinic.com/sitemap.xml)
