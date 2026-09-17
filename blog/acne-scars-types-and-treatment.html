@@ -120,6 +120,7 @@
                     <li><a href="/#doctor">Doctor</a></li>
 
                     <li><a href="/services">Services</a></li>
+                    <li><a href="/conditions">Conditions</a></li>
 
                     <li><a href="/gallery">Gallery</a></li>
 
@@ -409,6 +410,8 @@
 
         <nav class="footer-nav" aria-label="Footer">
             <a href="/services">Services</a>
+            <a href="/conditions">Conditions</a>
+            <a href="/treatments">Treatments</a>
             <a href="/gallery">Gallery</a>
             <a href="/blog">Blog</a>
             <a href="/#faq">FAQ</a>
@@ -458,6 +461,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "MedicalClinic",
+      "@id": "https://varniqaclinic.com/#clinic",
+      "name": "Varniqa Skin Sciences",
+      "url": "https://varniqaclinic.com/",
+      "logo": "https://varniqaclinic.com/images/logo-primary.svg",
+      "image": "https://varniqaclinic.com/images/og-image.jpg",
+      "telephone": "+919000153463",
+      "email": "care@varniqaskinsciences.com",
+      "medicalSpecialty": "Dermatology",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Second Floor, Hytek Arcade, Block A, Kanchi Gachibowli Rd, Gopanpalle, Nallagandla",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500046",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://varniqaclinic.com/#dr-manvitha-poluri",
+      "name": "Dr. Manvitha Poluri",
+      "honorificPrefix": "Dr.",
+      "honorificSuffix": "MBBS, MD (DVL)",
+      "jobTitle": "Founder & Chief Consultant Dermatologist",
+      "url": "https://varniqaclinic.com/#doctor",
+      "image": "https://varniqaclinic.com/images/doctor.webp",
+      "medicalSpecialty": "Dermatology",
+      "worksFor": {
+        "@id": "https://varniqaclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://varniqaclinic.com/blog#blog",
+      "url": "https://varniqaclinic.com/blog",
+      "name": "Varniqa Skin Sciences — Skin and hair, explained properly",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://varniqaclinic.com/#clinic"
+      }
+    },
+    {
       "@type": [
         "BlogPosting",
         "MedicalWebPage"
@@ -472,6 +518,7 @@
       "dateModified": "2026-08-16",
       "author": { "@id": "https://varniqaclinic.com/#dr-manvitha-poluri" },
       "reviewedBy": { "@id": "https://varniqaclinic.com/#dr-manvitha-poluri" },
+      "lastReviewed": "2026-08-16",
       "publisher": {
         "@id": "https://varniqaclinic.com/#clinic"
       },

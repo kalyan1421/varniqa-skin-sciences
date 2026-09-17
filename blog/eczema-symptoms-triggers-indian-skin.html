@@ -69,6 +69,7 @@
                     <li><a href="/#about">About</a></li>
                     <li><a href="/#doctor">Doctor</a></li>
                     <li><a href="/services">Services</a></li>
+                    <li><a href="/conditions">Conditions</a></li>
                     <li><a href="/gallery">Gallery</a></li>
                     <li><a href="/blog" aria-current="page">Blog</a></li>
                     <li><a href="/#faq">FAQ</a></li>
@@ -195,6 +196,8 @@
         </p>
         <nav class="footer-nav" aria-label="Footer">
             <a href="/services">Services</a>
+            <a href="/conditions">Conditions</a>
+            <a href="/treatments">Treatments</a>
             <a href="/gallery">Gallery</a>
             <a href="/blog">Blog</a>
             <a href="/#faq">FAQ</a>
@@ -236,6 +239,45 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "MedicalClinic",
+      "@id": "https://varniqaclinic.com/#clinic",
+      "name": "Varniqa Skin Sciences",
+      "url": "https://varniqaclinic.com/",
+      "logo": "https://varniqaclinic.com/images/logo-primary.svg",
+      "image": "https://varniqaclinic.com/images/og-image.jpg",
+      "telephone": "+919000153463",
+      "email": "care@varniqaskinsciences.com",
+      "medicalSpecialty": "Dermatology",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Second Floor, Hytek Arcade, Block A, Kanchi Gachibowli Rd, Gopanpalle, Nallagandla",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500046",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://varniqaclinic.com/#website",
+      "url": "https://varniqaclinic.com/",
+      "name": "Varniqa Skin Sciences",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://varniqaclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://varniqaclinic.com/blog#blog",
+      "url": "https://varniqaclinic.com/blog",
+      "name": "Varniqa Skin Sciences — Skin and hair, explained properly",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://varniqaclinic.com/#clinic"
+      }
+    },
+    {
       "@type": "MedicalWebPage",
       "@id": "https://varniqaclinic.com/blog/eczema-symptoms-triggers-indian-skin#webpage",
       "url": "https://varniqaclinic.com/blog/eczema-symptoms-triggers-indian-skin",
@@ -265,12 +307,7 @@
       "datePublished": "2026-09-17",
       "dateModified": "2026-09-17",
       "inLanguage": "en-IN",
-      "author": {
-        "@type": "Organization",
-        "@id": "https://varniqaclinic.com/#clinic",
-        "name": "Varniqa Skin Sciences",
-        "url": "https://varniqaclinic.com/"
-      },
+      "author": {"@id": "https://varniqaclinic.com/#clinic"},
       "publisher": {
         "@id": "https://varniqaclinic.com/#clinic"
       },

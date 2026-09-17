@@ -49,7 +49,8 @@
 
                     <li><a href="/#doctor">Doctor</a></li>
 
-                    <li><a href="/services" aria-current="page">Services</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/conditions" aria-current="page">Conditions</a></li>
 
                     <li><a href="/gallery">Gallery</a></li>
 
@@ -92,7 +93,7 @@
             <h2>Related reading</h2><p>For general assessment of skin conditions, see <a href="/services/dermatology">medical dermatology</a>. If a procedure is being considered after diagnosis, read about the clinic's <a href="/services/laser-treatments">laser treatments</a>. Dark marks following acne may also be discussed during an <a href="/blog/acne-treatment-nallagandla">acne consultation</a>.</p>
         </div>
         <div class="callout"><h3>Medical information notice</h3><p>This page is general education, not a diagnosis or individual treatment recommendation. Outcomes vary.</p></div>
-        <div class="author-box"><img src="/images/doctor-640.webp" alt="Dr. Manvitha Poluri at Varniqa Skin Sciences" width="76" height="76"><div><h2>Reviewed by the clinic's dermatologist</h2><p class="designation">Dr. Manvitha Poluri · MBBS, MD (DVL)</p><p>Founder and Chief Consultant Dermatologist at Varniqa Skin Sciences, Nallagandla.</p></div></div>
+        <div class="author-box"><img src="/images/doctor-640.webp" alt="Dr. Manvitha Poluri at Varniqa Skin Sciences" width="76" height="76" loading="lazy" decoding="async"><div><h2>Reviewed by the clinic's dermatologist</h2><p class="designation">Dr. Manvitha Poluri · MBBS, MD (DVL)</p><p>Founder and Chief Consultant Dermatologist at Varniqa Skin Sciences, Nallagandla.</p></div></div>
         </div></section>
         <section class="faq article-faq" id="faq"><div class="container container-narrow"><h2>Frequently asked questions about melasma and pigmentation treatment</h2><div class="faq-list"><div class="faq-group">
             <details class="faq-item"><summary><h3>Can melasma be cured permanently?</h3></summary><p>Melasma can often be improved and controlled, but it commonly recurs because sun, visible light, heat, hormones and individual susceptibility may continue to influence it. Maintenance and trigger control are usually needed after the initial improvement.</p></details>
@@ -116,7 +117,9 @@
             &middot; Open 7 days, 10:00 am &ndash; 8:00 pm
         </p>
         <nav class="footer-nav" aria-label="Footer">
-            <a href="/services" aria-current="page">Services</a>
+            <a href="/services">Services</a>
+            <a href="/conditions" aria-current="page">Conditions</a>
+            <a href="/treatments">Treatments</a>
             <a href="/gallery">Gallery</a>
             <a href="/blog">Blog</a>
             <a href="/#faq">FAQ</a>
@@ -154,7 +157,51 @@
     <script src="/js/script.js" defer></script>
     <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"MedicalWebPage","@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#webpage","url":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla","name":"Melasma & Pigmentation Treatment Nallagandla | Varniqa","description":"Dermatologist-led assessment and treatment planning for melasma and facial pigmentation in Nallagandla, Hyderabad, with care suited to South Asian skin.","isPartOf":{"@id":"https://varniqaclinic.com/#website"},"about":{"@id":"https://varniqaclinic.com/#clinic"},"inLanguage":"en-IN","datePublished":"2026-08-22","dateModified":"2026-08-22","reviewedBy":{"@id":"https://varniqaclinic.com/#dr-manvitha-poluri"},"breadcrumb":{"@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#breadcrumb"}},
+{
+  "@type": "MedicalClinic",
+  "@id": "https://varniqaclinic.com/#clinic",
+  "name": "Varniqa Skin Sciences",
+  "url": "https://varniqaclinic.com/",
+  "logo": "https://varniqaclinic.com/images/logo-primary.svg",
+  "image": "https://varniqaclinic.com/images/og-image.jpg",
+  "telephone": "+919000153463",
+  "email": "care@varniqaskinsciences.com",
+  "medicalSpecialty": "Dermatology",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Second Floor, Hytek Arcade, Block A, Kanchi Gachibowli Rd, Gopanpalle, Nallagandla",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500046",
+    "addressCountry": "IN"
+  }
+},
+{
+  "@type": "Physician",
+  "@id": "https://varniqaclinic.com/#dr-manvitha-poluri",
+  "name": "Dr. Manvitha Poluri",
+  "honorificPrefix": "Dr.",
+  "honorificSuffix": "MBBS, MD (DVL)",
+  "jobTitle": "Founder & Chief Consultant Dermatologist",
+  "url": "https://varniqaclinic.com/#doctor",
+  "image": "https://varniqaclinic.com/images/doctor.webp",
+  "medicalSpecialty": "Dermatology",
+  "worksFor": {
+    "@id": "https://varniqaclinic.com/#clinic"
+  }
+},
+{
+  "@type": "WebSite",
+  "@id": "https://varniqaclinic.com/#website",
+  "url": "https://varniqaclinic.com/",
+  "name": "Varniqa Skin Sciences",
+  "inLanguage": "en-IN",
+  "publisher": {
+    "@id": "https://varniqaclinic.com/#clinic"
+  }
+},
+{"@type":"MedicalWebPage","@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#webpage","url":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla","name":"Melasma & Pigmentation Treatment Nallagandla | Varniqa","description":"Dermatologist-led assessment and treatment planning for melasma and facial pigmentation in Nallagandla, Hyderabad, with care suited to South Asian skin.","isPartOf":{"@id":"https://varniqaclinic.com/#website"},"about":{"@id":"https://varniqaclinic.com/#clinic"},"inLanguage":"en-IN","datePublished":"2026-08-22","dateModified":"2026-08-22","reviewedBy":{"@id":"https://varniqaclinic.com/#dr-manvitha-poluri"},
+"lastReviewed": "2026-08-22","breadcrumb":{"@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#breadcrumb"}},
 {"@type":"MedicalCondition","@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#condition","name":"Melasma","alternateName":"Facial hyperpigmentation"},
 {"@type":"BreadcrumbList","@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://varniqaclinic.com/"},{"@type":"ListItem","position":2,"name":"Conditions","item":"https://varniqaclinic.com/conditions"},{"@type":"ListItem","position":3,"name":"Melasma and Pigmentation Treatment"}]},
 {"@type":"FAQPage","@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#faq","isPartOf":{"@id":"https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla#webpage"},"mainEntity":[

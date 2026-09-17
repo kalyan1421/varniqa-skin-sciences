@@ -69,6 +69,7 @@
                     <li><a href="/#about">About</a></li>
                     <li><a href="/#doctor">Doctor</a></li>
                     <li><a href="/services">Services</a></li>
+                    <li><a href="/conditions">Conditions</a></li>
                     <li><a href="/gallery">Gallery</a></li>
                     <li><a href="/blog" aria-current="page">Blog</a></li>
                     <li><a href="/#faq">FAQ</a></li>
@@ -237,6 +238,8 @@
         </p>
         <nav class="footer-nav" aria-label="Footer">
             <a href="/services">Services</a>
+            <a href="/conditions">Conditions</a>
+            <a href="/treatments">Treatments</a>
             <a href="/gallery">Gallery</a>
             <a href="/blog">Blog</a>
             <a href="/#faq">FAQ</a>
@@ -278,6 +281,25 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "MedicalClinic",
+          "@id": "https://varniqaclinic.com/#clinic",
+          "name": "Varniqa Skin Sciences",
+          "url": "https://varniqaclinic.com/",
+          "logo": "https://varniqaclinic.com/images/logo-primary.svg",
+          "image": "https://varniqaclinic.com/images/og-image.jpg",
+          "telephone": "+919000153463",
+          "email": "care@varniqaskinsciences.com",
+          "medicalSpecialty": "Dermatology",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Second Floor, Hytek Arcade, Block A, Kanchi Gachibowli Rd, Gopanpalle, Nallagandla",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "postalCode": "500046",
+            "addressCountry": "IN"
+          }
+        },
+        {
           "@type": "MedicalWebPage",
           "@id": "https://varniqaclinic.com/blog/hair-fall-causes-treatment-nallagandla#webpage",
           "url": "https://varniqaclinic.com/blog/hair-fall-causes-treatment-nallagandla",
@@ -299,7 +321,7 @@
           "datePublished": "2026-08-29",
           "dateModified": "2026-08-29",
           "inLanguage": "en-IN",
-          "author": {"@type": "Organization", "@id": "https://varniqaclinic.com/#clinic", "name": "Varniqa Skin Sciences"},
+          "author": {"@id": "https://varniqaclinic.com/#clinic"},
           "publisher": {"@id": "https://varniqaclinic.com/#clinic"},
           "mainEntityOfPage": {"@id": "https://varniqaclinic.com/blog/hair-fall-causes-treatment-nallagandla#webpage"},
           "about": [{"@type":"MedicalCondition","name":"Hair loss"},{"@type":"MedicalCondition","name":"Alopecia"}]

@@ -18,7 +18,12 @@
       "**/*.zip",
       "docs/**",
       "scripts/**",
-      "gallery images/**"
+      "gallery images/**",
+      "output/**",
+      "tmp/**",
+      ".tmp-seo/**",
+      "**/*.pdf",
+      "**/*.csv"
     ],
     "cleanUrls": true,
     "trailingSlash": false,

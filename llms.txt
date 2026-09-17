@@ -84,6 +84,9 @@
 - [Laser hair reduction on Indian skin](https://varniqaclinic.com/blog/laser-hair-reduction-indian-skin):
   how melanin and wavelength decide safe settings, hair colours laser cannot treat,
   preparation, hormonal causes of unwanted hair, and risks specific to deeper skin.
+- [Treatments and procedures](https://varniqaclinic.com/treatments): index of the
+  laser, injectable, surgical and hair-restoration procedures performed at the
+  clinic, each linked to the page that covers it. Prices are not listed.
 - [Conditions treated](https://varniqaclinic.com/conditions): index of the skin, hair,
   scalp and nail conditions the clinic treats, each linked to the page that
   covers it -- the service page, patient guide or condition page.

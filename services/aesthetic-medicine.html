@@ -115,6 +115,7 @@
                     <li><a href="/#doctor">Doctor</a></li>
 
                     <li><a href="/services" aria-current="page">Services</a></li>
+                    <li><a href="/conditions">Conditions</a></li>
 
                     <li><a href="/gallery">Gallery</a></li>
 
@@ -150,6 +151,8 @@
                 <p class="page-lead">
                     Non-surgical facial treatment, prescribed and performed by a dermatologist after an assessment — not selected from a menu and delegated to a technician.
                 </p>
+
+                <div class="post-meta"><span>Medically reviewed by Dr. Manvitha Poluri, MBBS, MD (DVL)</span><span class="dot"></span><span>Last reviewed <time datetime="2026-09-17">17 September 2026</time></span></div>
 
                 <div class="hero-buttons">
 
@@ -396,6 +399,16 @@
 
         </section>
 
+        <section class="section-tint">
+
+            <div class="container container-narrow">
+
+                <div class="author-box"><img src="/images/doctor-640.webp" alt="Dr. Manvitha Poluri at Varniqa Skin Sciences" width="76" height="76" loading="lazy" decoding="async"><div><h2>Reviewed by the clinic’s dermatologist</h2><p class="designation">Dr. Manvitha Poluri · MBBS, MD (DVL)</p><p>Founder and Chief Consultant Dermatologist at Varniqa Skin Sciences, Nallagandla. This page was last reviewed on <time datetime="2026-09-17">17 September 2026</time>.</p></div></div>
+
+            </div>
+
+        </section>
+
         <section class="cta-band">
 
             <div class="container">
@@ -449,6 +462,8 @@
 
         <nav class="footer-nav" aria-label="Footer">
             <a href="/services">Services</a>
+            <a href="/conditions">Conditions</a>
+            <a href="/treatments">Treatments</a>
             <a href="/gallery">Gallery</a>
             <a href="/blog">Blog</a>
             <a href="/#faq">FAQ</a>
@@ -499,6 +514,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "MedicalClinic",
+      "@id": "https://varniqaclinic.com/#clinic",
+      "name": "Varniqa Skin Sciences",
+      "url": "https://varniqaclinic.com/",
+      "logo": "https://varniqaclinic.com/images/logo-primary.svg",
+      "image": "https://varniqaclinic.com/images/og-image.jpg",
+      "telephone": "+919000153463",
+      "email": "care@varniqaskinsciences.com",
+      "medicalSpecialty": "Dermatology",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Second Floor, Hytek Arcade, Block A, Kanchi Gachibowli Rd, Gopanpalle, Nallagandla",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500046",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://varniqaclinic.com/#dr-manvitha-poluri",
+      "name": "Dr. Manvitha Poluri",
+      "honorificPrefix": "Dr.",
+      "honorificSuffix": "MBBS, MD (DVL)",
+      "jobTitle": "Founder & Chief Consultant Dermatologist",
+      "url": "https://varniqaclinic.com/#doctor",
+      "image": "https://varniqaclinic.com/images/doctor.webp",
+      "medicalSpecialty": "Dermatology",
+      "worksFor": {
+        "@id": "https://varniqaclinic.com/#clinic"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://varniqaclinic.com/#website",
+      "url": "https://varniqaclinic.com/",
+      "name": "Varniqa Skin Sciences",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://varniqaclinic.com/#clinic"
+      }
+    },
+    {
       "@type": "MedicalWebPage",
       "@id": "https://varniqaclinic.com/services/aesthetic-medicine#webpage",
       "url": "https://varniqaclinic.com/services/aesthetic-medicine",
@@ -511,10 +569,11 @@
         "@id": "https://varniqaclinic.com/#clinic"
       },
       "inLanguage": "en-IN",
-      "dateModified": "2026-08-16",
+      "dateModified": "2026-09-17",
       "reviewedBy": {
         "@id": "https://varniqaclinic.com/#dr-manvitha-poluri"
       },
+      "lastReviewed": "2026-09-17",
       "breadcrumb": {
         "@id": "https://varniqaclinic.com/services/aesthetic-medicine#breadcrumb"
       },

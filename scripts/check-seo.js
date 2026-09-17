@@ -461,16 +461,56 @@ function main() {
     return acc;
   };
   const shipping = walk(ROOT).filter((f) => !ignored(f));
+  // Allowlist, not denylist. A denylist only catches the droppings someone
+  // thought of: three client PDFs and two backlink CSVs under output/ were
+  // published live because .gitignore hid them from every diff and no rule
+  // named their extension. Anything whose type is not part of the website
+  // fails here, whatever directory it is hiding in.
+  const PUBLISHABLE = /\.(html|css|js|webp|jpe?g|png|svg|ico|woff2|txt|xml)$/i;
   for (const f of shipping) {
-    // Build artefacts and tool droppings are the ones that slip out: a stray
-    // firebase-debug.log at the repo root is published like any other file.
-    if (/\.(md|py|docx|log|patch|bak|orig|zip|sql|env)$/i.test(f)
-        || /^(docs|scripts)\//.test(f) || /(^|\/)\.env/.test(f)) {
-      fail(`${f} would be deployed but should not be — check firebase.json "ignore"`);
+    if (!PUBLISHABLE.test(f)) {
+      fail(`${f} would be deployed but is not a website file — add it to firebase.json "ignore"`);
     }
   }
   for (const p of pages) {
     if (ignored(p)) fail(`${p} is a real page but firebase.json excludes it from deploys`);
+  }
+
+  // --------------------------------------------------- structured data ---
+  // Google parses each page's JSON-LD on its own and does not fetch another
+  // URL to resolve an @id. A node referenced by @id but defined only on the
+  // homepage therefore reads as an empty node: publisher with no name,
+  // reviewedBy with nobody in it. Every graph has to stand alone.
+  for (const p of pages) {
+    const graph = graphOf(sources[p], p);
+    const defined = new Set();
+    const refs = new Set();
+    const walkNode = (o) => {
+      if (Array.isArray(o)) { o.forEach(walkNode); return; }
+      if (!o || typeof o !== 'object') return;
+      if (o['@id']) (o['@type'] ? defined : refs).add(o['@id']);
+      for (const v of Object.values(o)) walkNode(v);
+    };
+    graph.forEach(walkNode);
+    for (const id of refs) {
+      if (!defined.has(id)) {
+        fail(`${p}: JSON-LD references ${id} but never defines it on this page`);
+      }
+    }
+  }
+
+  // Two pages competing on one title is the cheapest cannibalisation there
+  // is, and it is invisible until you diff the whole site at once.
+  const titles = new Map();
+  for (const p of pages) {
+    const m = sources[p].match(/<title>([\s\S]*?)<\/title>/i);
+    if (!m) continue;
+    const t = unescapeHtml(m[1]).trim();
+    if (!titles.has(t)) titles.set(t, []);
+    titles.get(t).push(p);
+  }
+  for (const [t, ps] of titles) {
+    if (ps.length > 1) fail(`duplicate <title> "${t}" on ${ps.join(', ')}`);
   }
 
   // ------------------------------------------------------------- report ---
