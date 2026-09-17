@@ -22,7 +22,7 @@
 - **Areas served:** Nallagandla, Gopanpalle, Tellapur, Gachibowli, Kondapur,
   Lingampally and Serilingampally in west Hyderabad
 - **Languages:** English
-- **Last updated:** 2026-09-11
+- **Last updated:** 2026-09-17
 
 ## Services
 
@@ -73,6 +73,8 @@
 - [Contact](https://varniqaclinic.com/contact): all contact routes, directions,
   hours, and what happens at a first visit.
 - [Blog](https://varniqaclinic.com/blog): dermatology and hair-health patient education published by Varniqa Skin Sciences; medical review status is stated on each article.
+- [Eczema symptoms and triggers on Indian skin](https://varniqaclinic.com/blog/eczema-symptoms-triggers-indian-skin):
+  eczema awareness, symptoms on brown skin, everyday triggers, hand eczema, gentle care, urgent warning signs and a consultation diary; general patient education with cited medical sources.
 - [Hair fall causes and treatment in Nallagandla](https://varniqaclinic.com/blog/hair-fall-causes-treatment-nallagandla):
   normal shedding, pattern hair loss, telogen effluvium, alopecia areata, scalp disease, trichoscopy, testing and treatment approach.
 - [Acne treatment in Nallagandla](https://varniqaclinic.com/blog/acne-treatment-nallagandla):
