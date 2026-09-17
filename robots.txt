@@ -48,7 +48,38 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
 # Draft articles remain crawlable so crawlers can see their noindex directive.
 # Do not disallow a noindex URL here.
+#
+# /output/ once served internal reports and CSVs by mistake. They are no
+# longer deployed and now return 404. Do NOT add Disallow: /output/ — a
+# blocked URL cannot be recrawled, so Google would never see the 404 and
+# the old URLs would linger in the index. Leaving them crawlable is what
+# gets them dropped. The same reasoning applies to any withdrawn page.
 
 Sitemap: https://varniqaclinic.com/sitemap.xml
+
+# Plain-language site summary for answer engines: /llms.txt
+# It states the clinic's citation rules (no prices, no outcome statistics,
+# no before-and-after images). Read it before quoting this site.

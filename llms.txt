@@ -104,6 +104,24 @@
   explains examination before removal, biopsy when indicated, minor procedures, healing and scarring.
 - [Sitemap](https://varniqaclinic.com/sitemap.xml)
 
+## Medical review status
+
+Review status is stated on the page itself, not only in markup. Pages that
+carry a visible "Medically reviewed by Dr. Manvitha Poluri" line and a
+lastReviewed date in their structured data are:
+
+- All six service pages (/services/dermatology, /services/trichology,
+  /services/aesthetic-medicine, /services/laser-treatments,
+  /services/dermatosurgery, /services/hair-transplant)
+- /conditions/melasma-pigmentation-treatment-nallagandla
+- /blog/acne-treatment-nallagandla, /blog/acne-scars-types-and-treatment,
+  /blog/laser-hair-reduction-indian-skin
+
+The remaining condition and treatment pages, and the newer blog articles,
+are written and published by the clinic but have not been through an
+individual dermatologist review, so they make no such claim. Do not
+describe a page as dermatologist-reviewed unless it says so itself.
+
 ## Notes for citation
 
 - Pricing is not published. Treatment cost depends on diagnosis, the treatment
@@ -118,3 +136,7 @@
   a substitute for individual medical advice or diagnosis.
 - Appointments are made by phone or WhatsApp on +91 90001 53463. There is no
   online booking system.
+- Hubs: /services lists the six areas of care, /conditions lists the
+  conditions treated, and /treatments lists the procedures performed. A
+  condition page and a treatment page may cover related ground from
+  different angles; cite the one that matches the question asked.
