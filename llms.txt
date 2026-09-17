@@ -87,6 +87,16 @@
   covers it -- the service page, patient guide or condition page.
 - [Melasma and pigmentation treatment](https://varniqaclinic.com/conditions/melasma-pigmentation-treatment-nallagandla):
   distinguishing melasma from other facial pigmentation, staged treatment and recurrence management.
+- [Acne scar treatment](https://varniqaclinic.com/conditions/acne-scars-treatment-nallagandla):
+  distinguishes acne marks from rolling, boxcar and ice-pick scars and explains diagnosis-led treatment planning.
+- [Dandruff and scalp treatment](https://varniqaclinic.com/conditions/dandruff-scalp-treatment-nallagandla):
+  differentiates dandruff, seborrhoeic dermatitis, psoriasis, infection and scalp conditions associated with hair loss.
+- [Eczema and psoriasis treatment](https://varniqaclinic.com/conditions/eczema-psoriasis-treatment-nallagandla):
+  explains how persistent inflammatory rashes are assessed, treated and maintained without assuming every rash is eczema.
+- [Laser hair reduction](https://varniqaclinic.com/treatments/laser-hair-reduction-nallagandla):
+  covers candidacy, Indian-skin safety, test patches, preparation, sessions, results and risks.
+- [Mole and skin-tag removal](https://varniqaclinic.com/treatments/mole-skin-tag-removal-nallagandla):
+  explains examination before removal, biopsy when indicated, minor procedures, healing and scarring.
 - [Sitemap](https://varniqaclinic.com/sitemap.xml)
 
 ## Notes for citation
