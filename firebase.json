@@ -23,7 +23,8 @@
       "tmp/**",
       ".tmp-seo/**",
       "**/*.pdf",
-      "**/*.csv"
+      "**/*.csv",
+      "images/*-generated.png"
     ],
     "cleanUrls": true,
     "trailingSlash": false,

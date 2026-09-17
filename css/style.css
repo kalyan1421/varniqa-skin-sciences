@@ -2518,6 +2518,159 @@ html{
 
 }
 
+/* --- service imagery ---
+   The services overview is intentionally text-led, but each area of care now
+   carries a real clinic image so visitors can orient themselves visually.
+   Images sit beside the reading column on larger screens and become full-width
+   editorial panels on smaller screens. */
+
+#dermatology,
+#trichology,
+#aesthetic-medicine,
+#laser-treatments,
+#dermatosurgery,
+#hair-transplant{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#dermatology::before,
+#trichology::before,
+#aesthetic-medicine::before,
+#laser-treatments::before,
+#dermatosurgery::before,
+#hair-transplant::before{
+
+    content:"";
+
+    position:absolute;
+    top:76px;
+    bottom:76px;
+
+    width:min(27vw,340px);
+    min-height:320px;
+
+    border-radius:24px;
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    box-shadow:0 18px 44px rgba(54,74,98,.14);
+
+}
+
+#dermatology::before{
+    right:clamp(20px,calc((100vw - 1180px) / 2),96px);
+    background-image:url('/images/service-dermatology-generated.webp');
+}
+
+#trichology::before{
+    left:clamp(20px,calc((100vw - 1180px) / 2),96px);
+    background-image:url('/images/service-trichology-generated.webp');
+}
+
+#aesthetic-medicine::before{
+    right:clamp(20px,calc((100vw - 1180px) / 2),96px);
+    background-image:url('/images/service-aesthetic-generated.webp');
+}
+
+#laser-treatments::before{
+    left:clamp(20px,calc((100vw - 1180px) / 2),96px);
+    background-image:url('/images/service-laser-generated.webp');
+}
+
+#dermatosurgery::before{
+    right:clamp(20px,calc((100vw - 1180px) / 2),96px);
+    background-image:url('/images/service-dermatosurgery-generated.webp');
+}
+
+#hair-transplant::before{
+    left:clamp(20px,calc((100vw - 1180px) / 2),96px);
+    background-image:url('/images/service-hair-transplant-generated.webp');
+}
+
+#dermatology > .container,
+#trichology > .container,
+#aesthetic-medicine > .container,
+#laser-treatments > .container,
+#dermatosurgery > .container,
+#hair-transplant > .container{
+
+    position:relative;
+    z-index:1;
+
+    max-width:1040px;
+
+}
+
+#dermatology > .container,
+#aesthetic-medicine > .container,
+#dermatosurgery > .container{
+
+    padding-right:360px;
+
+}
+
+#trichology > .container,
+#laser-treatments > .container,
+#hair-transplant > .container{
+
+    padding-left:360px;
+
+}
+
+@media (max-width:900px){
+
+    #dermatology,
+    #trichology,
+    #aesthetic-medicine,
+    #laser-treatments,
+    #dermatosurgery,
+    #hair-transplant{
+
+        padding-top:0;
+
+    }
+
+    #dermatology::before,
+    #trichology::before,
+    #aesthetic-medicine::before,
+    #laser-treatments::before,
+    #dermatosurgery::before,
+    #hair-transplant::before{
+
+        position:relative;
+        inset:auto;
+
+        display:block;
+        width:100%;
+        height:220px;
+        min-height:0;
+
+        margin-bottom:40px;
+
+        border-radius:0 0 24px 24px;
+
+    }
+
+    #dermatology > .container,
+    #trichology > .container,
+    #aesthetic-medicine > .container,
+    #laser-treatments > .container,
+    #dermatosurgery > .container,
+    #hair-transplant > .container{
+
+        max-width:640px;
+        padding-left:24px;
+        padding-right:24px;
+
+    }
+
+}
 /* --- actions at the end of a section --- */
 
 .section-actions{

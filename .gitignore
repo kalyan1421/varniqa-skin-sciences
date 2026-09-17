@@ -23,6 +23,9 @@ output/
 # Photo originals. The repo root is the web root, so anything committed here
 # is published: only the optimised webp derivatives in images/ belong in git.
 gallery images/
+# Unoptimised sources for the service-card art. Only the webp derivatives
+# are referenced by style.css and only those should be committed or served.
+images/*-generated.png
 *.zip
 
 # Python bytecode only. The scripts in scripts/ are checked in on purpose:
